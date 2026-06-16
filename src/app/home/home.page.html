@@ -1,20 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>AppKaddak</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div *ngIf="!isOnline" style="background: red; color: white; text-align: center; padding: 20px; font-weight: bold;">
+  ⚠️ No tienes internet (Modo Offline)
+</div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div style="padding: 20px; text-align: center;">
+    <strong>Bienvenido a AppKaddak</strong>
+    <p>El sistema está monitoreando tu conexión en tiempo real.</p>
   </div>
+  <div style="padding: 20px;">
+  <ion-button expand="block" (click)="simulateOrder()">
+    Simular Pedido (Prueba Offline)
+  </ion-button>
+</div>
 </ion-content>
