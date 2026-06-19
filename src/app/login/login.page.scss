@@ -1,0 +1,69 @@
+ion-content {
+  --background: #f5f7fa;
+}
+
+.Card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+ion-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+ion-card-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+h4 {
+  text-align: center;
+  color: #666;
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+
+ion-item {
+  margin-bottom: 15px;
+  --border-radius: 10px;
+}
+
+ion-button {
+  width: 100%;
+  margin-top: 20px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+p {
+  text-align: center;
+  color: #888;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.social-icons img {
+    
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+}

@@ -68,3 +68,134 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+
+div class="Card"> 
+     <ion-card>
+          <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+        </ion-card-header>
+
+         <ion-card-content>
+          <ion-item>
+               <ionlabel position="floating">Usuario</ionlabel>
+               <ion-input type="Email"></ion-input>
+            </ion-item>
+            <ion-item>
+               <ionlabel position="floating">Contresena</ionlabel>
+               <ion-input type="Contresena"></ion-input>
+            </ion-item>
+           </ion-card-content>
+             <ion-button> Iniciar Seccion</ion-button>
+             <p> o continua con</p>
+      <div class="social-icons">
+         <ion-button fill="clear">
+           <ion-icon name="logo-google"></ion-icon>
+          </ion-button>
+
+          <ion-button fill="clear">
+            <ion-icon name="logo-facebook"></ion-icon>
+         </ion-button>
+
+           <ion-button fill="clear">
+            <ion-icon name="logo-apple"></ion-icon>
+          </ion-button>
+
+      </div>
+
+
+      </ion-card>
+    </div> 
+
+    import 
+
+
+<ion-input></ion-input>
+
+<ion-input
+  id="custom-input"
+  label="Custom Counter Format"
+  labelPlacement="floating"
+  [counter]="true"
+  maxlength="20"
+  [counterFormatter]="customCounterFormatter"
+></ion-input>
+
+
+
+
+<ion-content [fullscreen]="true">
+    <ion-card>
+         <ion-card-header>
+         <ion-card-title>Crea tu cuenta</ion-card-title>
+      <ion-card-subtitle>Es muy rapido y facil</ion-card-subtitle>
+   </ion-card-header>
+        <ion-item>
+           <ion-input label="Nombre Completo" labelPlacement="floating" placeholder="Enter text"></ion-input>
+         </ion-item>
+          <ion-item>
+           <ion-input label="Correo electronico" labelPlacement="floating" placeholder="Enter text"></ion-input>
+         </ion-item>
+           <ion-item>
+            <ion-input label="Telefono" type="tel" placeholder="888-888-8888"></ion-input>
+           </ion-item>
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="Email" placeholder="email@domain.com">
+           <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+             <ion-button fill="clear" slot="end" aria-label="Show/hide">
+             <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+          </ion-button>
+         </ion-input>
+       </ion-item> 
+
+  <ion-card-content>
+</ion-content>
+
+
+
+
+
+codigo de html 
+  <ion-content>
+  <ion-card>
+       <ion-card-header>
+          <ion-card-title>Crea tu cuenta</ion-card-title>
+          <ion-card-subtitle>Es rapido y facil</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+          <ion-item>
+             <ion-input label="Nombre Completo" labelPlacement="floating" placeholder="Enter text"></ion-input>
+           </ion-item>
+           <ion-item>
+             <ion-input label="Correo electronico" labelPlacement="floating" placeholder="Enter text"></ion-input>
+           </ion-item>
+           <ion-item>
+            <ion-input label="Telefono" type="tel" placeholder="888-888-8888"></ion-input>
+           </ion-item>
+             <ion-item>
+                <ion-input label="Contresena" labelPlacement="floating" placeholder="Enter text"></ion-input>
+              </ion-item> 
+              <ion-item>
+                <ion-input label="Confirmacion" labelPlacement="floating" placeholder="Confirmar contrasena"></ion-input>
+              </ion-item> 
+               <ion-checkbox>I agree to the <a href="#" (click)="$event.stopPropagation()">terms and conditions</a></ion-checkbox>
+                 <ion-button>Registrarme</ion-button>
+                  <p> Ya tienes cuenta? </p> <h5> Iniciar</h5>
+       </ion-card-content>
+    <ion-card>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

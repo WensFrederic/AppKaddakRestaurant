@@ -1,0 +1,78 @@
+ion-content {
+  --background: #f5f7fa;
+}
+
+ion-card {
+  margin: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+ion-card-header {
+  text-align: center;
+  padding-top: 25px;
+}
+
+ion-card-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+}
+
+ion-card-subtitle {
+  margin-top: 5px;
+  color: #777;
+}
+
+ion-card-content {
+  padding: 20px;
+}
+
+ion-item {
+  margin-bottom: 15px;
+  --border-radius: 12px;
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.terms-container a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-btn {
+  margin-top: 10px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link p {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.login-link a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+@media (min-width: 768px) {
+  ion-card {
+    max-width: 500px;
+    margin: 40px auto;
+  }
+}
