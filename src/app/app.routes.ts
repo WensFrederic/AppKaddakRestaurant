@@ -2,14 +2,10 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
-  },
-  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full',
-  },  {
+  },  {
     path: 'loader',
     loadComponent: () => import('./loader/loader.page').then( m => m.LoaderPage)
   },
@@ -28,6 +24,14 @@ export const routes: Routes = [
   {
     path: 'mipedido',
     loadComponent: () => import('./mipedido/mipedido.page').then( m => m.MipedidoPage)
+  },
+  {
+    path: 'admin-platos',
+    loadComponent: () => import('./admin-platos/admin-platos.page').then( m => m.AdminPlatosPage)
+  },
+  {
+    path: 'perfil',
+    loadComponent: () => import('./perfil/perfil.page').then( m => m.PerfilPage)
   },
 
 ];

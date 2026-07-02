@@ -1,23 +1,96 @@
 <ion-content>
-    <ion-card>
-      <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-     </ion-card-header>
+  <div class="header">
+    <h2>Tu Pedido 🛒</h2>
+    <p>Revisa tus platos antes de pagar</p>
+  </div>
 
-     <ion-card-content>
-            <ion-item>
-             <ion-input label="usuario" placeholder="Enter company name"></ion-input>
-          </ion-item>
-                <ion-item>
-               <ion-input label="contraseña" placeholder="Enter company name"></ion-input>
-            </ion-item>
-    
-        </ion-card-content>
-   </ion-card>
-  
+  <div class="empty-state" *ngIf="cartItems.length === 0">
+    <h2>🍽️</h2>
+    <p>Tu carrito está vacío.<br>Agrega platos desde el Menú.</p>
+  </div>
 
+  <div class="cart-items" *ngIf="cartItems.length > 0">
+    <div class="cart-item" *ngFor="let item of cartItems">
+      <div class="item-info">
+        <h3>{{ item.nombre_comida }}</h3>
+        <p>${{ item.precio }}</p>
+      </div>
+      <div class="quantity-badge">
+        x{{ item.cantidad }}
+      </div>
+    </div>
+  </div>
 
+  <div class="delivery-options" *ngIf="cartItems.length > 0" style="padding: 10px;">
+    <h3 style="font-weight: 700; color: #333; margin-bottom: 10px;">Opciones de Entrega</h3>
+    <ion-segment [(ngModel)]="tipoEntrega" color="primary">
+      <ion-segment-button value="pickup">
+        <ion-label>Pick Up</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="delivery">
+        <ion-label>Delivery</ion-label>
+      </ion-segment-button>
+    </ion-segment>
 
+    <div *ngIf="tipoEntrega === 'delivery'" style="margin-top: 15px;">
+      <ion-item lines="full" style="--background: transparent;">
+        <ion-label position="floating" style="color: #666;">Dirección de entrega</ion-label>
+        <ion-input type="text" [(ngModel)]="direccionEntrega"></ion-input>
+      </ion-item>
+    </div>
+  </div>
 
+  <div class="payment-section" *ngIf="cartItems.length > 0" style="padding: 10px;">
+    <h3 style="font-weight: 700; color: #333; margin-bottom: 10px;">Método de Pago</h3>
+    <ion-segment [(ngModel)]="metodoPago" color="secondary">
+      <ion-segment-button value="tarjeta">
+        <ion-label>Tarjeta</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="paypal">
+        <ion-label>PayPal</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="efectivo">
+        <ion-label>Efectivo</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div class="totals">
+      <div class="row">
+        <span>Subtotal</span>
+        <span>${{ total }}</span>
+      </div>
+      <div class="row">
+        <span>Impuestos / Envío</span>
+        <span>$0.00</span>
+      </div>
+      <div class="row grand-total">
+        <span>Total a Pagar</span>
+        <span>${{ total }}</span>
+      </div>
+    </div>
+
+    <ion-button expand="block" class="pay-btn" (click)="confirmarPedido()">
+      Pagar y Ordenar
+    </ion-button>
+
+    <ion-button expand="block" fill="clear" color="medium" (click)="vaciarCarrito()" style="margin-top: 10px;">
+      Vaciar Carrito
+    </ion-button>
+  </div>
 </ion-content>
+
+<!-- Bottom Menu -->
+<ion-tab-bar slot="bottom">
+  <ion-tab-button routerLink="/menu">
+    <ion-icon name="restaurant"></ion-icon>
+    <ion-label>Menú</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/mipedido">
+    <ion-icon name="receipt"></ion-icon>
+    <ion-label>Pedidos</ion-label>
+  </ion-tab-button>
+  <ion-tab-button routerLink="/perfil">
+    <ion-icon name="person"></ion-icon>
+    <ion-label>Perfil</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
