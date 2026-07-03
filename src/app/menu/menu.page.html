@@ -1,19 +1,18 @@
-<ion-content>  
-       <ion-content>
+<ion-content>
 
   <!-- Header -->
   <div class="header">
-
     <div>
-      <h2>¡Hola, Ana! 👋</h2>
+      <h2>¡Hola! 👋</h2>
       <p>¿Qué vas a ordenar hoy?</p>
     </div>
 
     <div class="icons">
-      <ion-icon name="notifications-outline"></ion-icon>
-      <ion-icon name="cart-outline"></ion-icon>
+      <div class="cart-icon-wrapper" routerLink="/mipedido" style="position: relative; cursor: pointer;">
+        <ion-icon name="cart-outline" style="font-size: 28px; color: #333;"></ion-icon>
+        <span *ngIf="cartItemsCount > 0" style="position: absolute; top: -6px; right: -6px; background: #ff4757; color: white; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; display: flex; align-items: center; justify-content: center; font-weight: bold;">{{ cartItemsCount }}</span>
+      </div>
     </div>
-
   </div>
 
   <!-- Search -->
@@ -25,32 +24,17 @@
   <!-- Categorias -->
 
   <div class="categories">
-
+    <!-- Static option for Popular/All -->
     <div class="category">
       <div class="circle active">🍜</div>
-      <span>Popular</span>
+      <span>Todos</span>
     </div>
 
-    <div class="category">
-      <div class="circle">🍕</div>
-      <span>Pizza</span>
+    <!-- Dynamic categories -->
+    <div class="category" *ngFor="let cat of categorias">
+      <div class="circle">🍽️</div>
+      <span>{{ cat.nombre_categoria }}</span>
     </div>
-
-    <div class="category">
-      <div class="circle">🍔</div>
-      <span>Burgers</span>
-    </div>
-
-    <div class="category">
-      <div class="circle">🥤</div>
-      <span>Bebidas</span>
-    </div>
-
-    <div class="category">
-      <div class="circle">🍰</div>
-      <span>Postres</span>
-    </div>
-
   </div>
 
   <!-- Banner -->
@@ -86,48 +70,31 @@
     <img src="assets/images/burger.jpg">
 
     <div class="info">
-
       <h3>Hamburguesa Kaddak</h3>
-
       <p>
         Carne 100% fresca,
         queso cheddar y salsa especial
       </p>
-
       <h4>$12.50</h4>
-
     </div>
-
-    <ion-button shape="round">
+    <ion-button shape="round" (click)="agregarAlCarrito({id: 'promo1', nombre_comida: 'Hamburguesa Kaddak', precio: 12.50})">
       +
     </ion-button>
-
   </div>
 
   <!-- Grid -->
 
   <div class="food-grid">
-
-    <div class="food-card">
-
-      <img src="assets/images/pizza.jpg">
-
-      <h4>Pizza Especial</h4>
-
-      <span>$14.90</span>
-
+    <div class="food-card" *ngFor="let comida of comidas">
+      <img [src]="comida.imagen || 'assets/images/burger.jpg'">
+      <h4>{{ comida.nombre_comida }}</h4>
+      <div class="price-row">
+        <span>${{ comida.precio }}</span>
+        <ion-button (click)="agregarAlCarrito(comida)">
+          +
+        </ion-button>
+      </div>
     </div>
-
-    <div class="food-card">
-
-      <img src="assets/images/pasta.jpg">
-
-      <h4>Pasta Alfredo</h4>
-
-      <span>$11.90</span>
-
-    </div>
-
   </div>
 
 </ion-content>
@@ -135,28 +102,19 @@
 <!-- Bottom Menu -->
 
 <ion-tab-bar slot="bottom">
-
-  <ion-tab-button>
-    <ion-icon name="home"></ion-icon>
-    <ion-label>Inicio</ion-label>
-  </ion-tab-button>
-
-  <ion-tab-button>
+  <ion-tab-button routerLink="/menu">
     <ion-icon name="restaurant"></ion-icon>
     <ion-label>Menú</ion-label>
   </ion-tab-button>
 
-  <ion-tab-button>
+  <ion-tab-button routerLink="/mipedido">
     <ion-icon name="receipt"></ion-icon>
     <ion-label>Pedidos</ion-label>
   </ion-tab-button>
 
-  <ion-tab-button>
+  <ion-tab-button routerLink="/perfil">
     <ion-icon name="person"></ion-icon>
     <ion-label>Perfil</ion-label>
   </ion-tab-button>
-
 </ion-tab-bar>
-     
-  
-</ion-content>
+
