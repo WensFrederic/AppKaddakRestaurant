@@ -11,11 +11,6 @@ import { IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonItem, IonButton
   styleUrls: ['./register.page.scss'],
   standalone: true,
   imports: [IonContent, 
-    IonCard, 
-    IonCardHeader,
-    IonCardContent, 
-    IonCardSubtitle,
-    IonCardTitle, 
     IonItem, 
     IonCheckbox,
     IonButton, 
@@ -26,9 +21,10 @@ import { IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonItem, IonButton
 export class RegisterPage implements OnInit {
 
   constructor( private router:Router) {}
-menus(){
-  this.router.navigate(['/menu'])
+logins(){
+  this.router.navigate(['/login'])
 }
+
   ngOnInit() {
   }
 

@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { IonContent, IonTabButton, IonLabel, IonIcon, IonSearchbar, IonTabBar, IonButton, IonBadge, ToastController } from '@ionic/angular/standalone';
+import { IonContent, IonTabButton, IonLabel, IonIcon, IonSearchbar, IonTabBar,IonToolbar,IonFooter, IonButton, IonBadge, ToastController } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { cartOutline, cart, restaurant, receipt, person } from 'ionicons/icons';
+import { cartOutline, cart, restaurant, receipt, person, notificationsOutline, flame, add, home, clipboard } from 'ionicons/icons';
 import { ApiService } from '../services/api.service';
 import { CartService } from '../services/cart.service';
 
@@ -15,7 +15,13 @@ addIcons({ cartOutline, cart, restaurant, receipt, person });
   templateUrl: './menu.page.html',
   styleUrls: ['./menu.page.scss'],
   standalone: true,
-  imports: [IonContent, IonTabButton, IonLabel, IonIcon, IonSearchbar, IonTabBar, IonButton, IonBadge, CommonModule, FormsModule, RouterModule]
+  imports: [IonContent,
+    IonIcon,
+    IonToolbar, 
+    IonFooter,
+    IonButton,
+    IonSearchbar,
+    CommonModule, FormsModule, RouterModule]
 })
 export class MenuPage implements OnInit {
   categorias: any[] = [];
@@ -25,7 +31,8 @@ export class MenuPage implements OnInit {
     private apiService: ApiService,
     private cartService: CartService,
     private toastController: ToastController
-  ) { }
+  ) {
+      addIcons({notificationsOutline,cartOutline,flame,add,home,restaurant,clipboard,person}); }
 
   ngOnInit() {
     this.apiService.getCategorias().subscribe({

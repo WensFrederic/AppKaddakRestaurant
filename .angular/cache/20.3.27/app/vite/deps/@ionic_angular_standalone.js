@@ -8,16 +8,16 @@ import {
   n as n3,
   p as p2,
   t as t3
-} from "./chunk-TM4GKXEZ.js";
+} from "./chunk-6K5WCMLK.js";
 import {
   e as e4
-} from "./chunk-4SKD3W26.js";
+} from "./chunk-4ZZNPFDI.js";
 import {
   l as l2
-} from "./chunk-OKHQ6KXI.js";
+} from "./chunk-KKYZSFP4.js";
 import {
   i as i2
-} from "./chunk-O3ZLENVE.js";
+} from "./chunk-FJO3S3IZ.js";
 import {
   A,
   D,
@@ -30,15 +30,15 @@ import {
   s as s3,
   t as t2,
   v as v2
-} from "./chunk-N7JK3S4I.js";
+} from "./chunk-NHEX6WTK.js";
 import {
   a,
   c as c3,
   o as o3
-} from "./chunk-PFCMX34G.js";
+} from "./chunk-TUZHT5D5.js";
 import {
   o as o4
-} from "./chunk-JOQNI6T3.js";
+} from "./chunk-FFK7SIME.js";
 import {
   T,
   _,
@@ -58,12 +58,12 @@ import {
   v,
   x,
   y
-} from "./chunk-Q6ZGL456.js";
+} from "./chunk-PM7G3QOZ.js";
 import {
   h,
   i as i3,
   s as s4
-} from "./chunk-Q7PV5YUG.js";
+} from "./chunk-HGOE57WJ.js";
 import {
   An,
   Ct,
@@ -84,19 +84,19 @@ import {
   q,
   s,
   u
-} from "./chunk-5ZNTDABU.js";
+} from "./chunk-HTNU6CUB.js";
 import {
   t as t5
-} from "./chunk-7C6JS6MP.js";
+} from "./chunk-WSOTV7GN.js";
 import {
   i as i5,
   r as r3,
   t as t4
-} from "./chunk-AN4BRTIS.js";
+} from "./chunk-L4VMBIYS.js";
 import {
   d,
   o as o2
-} from "./chunk-FBOO75ZN.js";
+} from "./chunk-QZZGJWSY.js";
 import {
   ActivatedRoute,
   ChildrenOutletContexts,
@@ -107,21 +107,21 @@ import {
   Router,
   RouterLink,
   UrlSerializer
-} from "./chunk-KRVHSYJH.js";
+} from "./chunk-RQKN3TKE.js";
+import "./chunk-TTYW6XNM.js";
+import "./chunk-G565BLSS.js";
 import {
   NG_VALUE_ACCESSOR,
   NgControl
-} from "./chunk-PHMUD5XL.js";
-import "./chunk-H6JSUAH4.js";
+} from "./chunk-BEA7YOTQ.js";
 import {
   CommonModule,
   Location,
   LocationStrategy,
   NgIf,
   NgTemplateOutlet
-} from "./chunk-BLRFISUP.js";
-import "./chunk-WX4X55UY.js";
-import "./chunk-JRX4MMIO.js";
+} from "./chunk-KZORRB5X.js";
+import "./chunk-KI4BQUHV.js";
 import {
   APP_INITIALIZER,
   ApplicationRef,
@@ -193,7 +193,7 @@ import {
   ɵɵrestoreView,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-RLGU4JSB.js";
+} from "./chunk-4HLJSDSY.js";
 import {
   __async,
   __objRest,
@@ -3763,7 +3763,7 @@ var b5 = Vn(class extends I {
       const t16 = () => {
         this.gestureOrAnimationInProgress = true, this.swipeHandler && this.swipeHandler.onStart();
       };
-      this.gesture = (yield import("./p-Sh0ICmPV-C2JUZEIM.js")).createSwipeBackGesture(this.el, (() => !this.gestureOrAnimationInProgress && !!this.swipeHandler && this.swipeHandler.canStart()), (() => t16()), ((t17) => {
+      this.gesture = (yield import("./p-Sh0ICmPV-DUA6KA3K.js")).createSwipeBackGesture(this.el, (() => !this.gestureOrAnimationInProgress && !!this.swipeHandler && this.swipeHandler.canStart()), (() => t16()), ((t17) => {
         var i16;
         return null === (i16 = this.ani) || void 0 === i16 ? void 0 : i16.progressStep(t17);
       }), ((t17, i16, s21) => {
@@ -5579,12 +5579,12 @@ var d7 = Vn(class extends I {
   componentDidLoad() {
     this.rIC((() => __async(this, null, function* () {
       const t16 = s5(window, "hybrid");
-      if (n.getBoolean("_testing") || import("./p-C4t5ymfq-YMEL5AII.js").then(((t17) => t17.startTapClick(n))), n.getBoolean("statusTap", t16) && import("./p-D7bSXQD3-IXD5KMRO.js").then(((t17) => t17.startStatusTap())), n.getBoolean("inputShims", m9())) {
+      if (n.getBoolean("_testing") || import("./p-C4t5ymfq-GJBPDE7L.js").then(((t17) => t17.startTapClick(n))), n.getBoolean("statusTap", t16) && import("./p-D7bSXQD3-U5JNDKZU.js").then(((t17) => t17.startStatusTap())), n.getBoolean("inputShims", m9())) {
         const t17 = s5(window, "ios") ? "ios" : "android";
-        import("./p-D5Ubpm7D-54MNCVM3.js").then(((e17) => e17.startInputShims(n, t17)));
+        import("./p-D5Ubpm7D-IPHIBTP2.js").then(((e17) => e17.startInputShims(n, t17)));
       }
-      const e16 = yield import("./p-Bz0dSlXZ-7APZMQAP.js"), i16 = t16 || o3();
-      n.getBoolean("hardwareBackButton", i16) ? e16.startHardwareBackButton() : (o3() && u("[ion-app] - experimentalCloseWatcher was set to `true`, but hardwareBackButton was set to `false`. Both config options must be `true` for the Close Watcher API to be used."), e16.blockHardwareBackButton()), "undefined" != typeof window && import("./p-D6Ynv7Xh-ST6HJO3M.js").then(((t17) => t17.startKeyboardAssist(window))), import("./p-BmVRXR1y-YTKZTMUC.js").then(((t17) => this.focusVisible = t17.startFocusVisible()));
+      const e16 = yield import("./p-Bz0dSlXZ-XHJVXSQK.js"), i16 = t16 || o3();
+      n.getBoolean("hardwareBackButton", i16) ? e16.startHardwareBackButton() : (o3() && u("[ion-app] - experimentalCloseWatcher was set to `true`, but hardwareBackButton was set to `false`. Both config options must be `true` for the Close Watcher API to be used."), e16.blockHardwareBackButton()), "undefined" != typeof window && import("./p-D6Ynv7Xh-K3RETSIS.js").then(((t17) => t17.startKeyboardAssist(window))), import("./p-BmVRXR1y-26ELWHEV.js").then(((t17) => this.focusVisible = t17.startFocusVisible()));
     })));
   }
   disconnectedCallback() {
@@ -7549,7 +7549,7 @@ var u12 = Vn(class extends I {
       const { el: t16 } = this;
       this.item = t16.querySelector("ion-item"), this.contentEl = m2(t16), this.mutationObserver = r14(t16, "ion-item-option", (() => __async(this, null, function* () {
         yield this.updateOptions();
-      }))), yield this.updateOptions(), this.gesture = (yield import("./p-Cl0B-RWe-H6NRW7E2.js")).createGesture({ el: t16, gestureName: "item-swipe", gesturePriority: 100, threshold: 5, canStart: (t17) => this.canStart(t17), onStart: () => this.onStart(), onMove: (t17) => this.onMove(t17), onEnd: (t17) => this.onEnd(t17) }), this.disabledChanged();
+      }))), yield this.updateOptions(), this.gesture = (yield import("./p-Cl0B-RWe-B4SJBYPM.js")).createGesture({ el: t16, gestureName: "item-swipe", gesturePriority: 100, threshold: 5, canStart: (t17) => this.canStart(t17), onStart: () => this.onStart(), onMove: (t17) => this.onMove(t17), onEnd: (t17) => this.onEnd(t17) }), this.disabledChanged();
     });
   }
   disconnectedCallback() {
@@ -7903,7 +7903,7 @@ var S5 = Vn(class extends I {
     return __async(this, null, function* () {
       "undefined" != typeof customElements && null != customElements && (yield customElements.whenDefined("ion-menu")), void 0 === this.type && (this.type = n.get("menuType", "overlay"));
       const t16 = void 0 !== this.contentId ? document.getElementById(this.contentId) : null;
-      null !== t16 ? (this.el.contains(t16) && f(`[ion-menu] - The "contentId" should refer to the main view's ion-content, not the ion-content inside of the ion-menu.`), this.contentEl = t16, t16.classList.add("menu-content"), this.typeChanged(this.type, void 0), this.sideChanged(), m4._register(this), this.menuChanged(), this.gesture = (yield import("./p-Cl0B-RWe-H6NRW7E2.js")).createGesture({ el: document, gestureName: "menu-swipe", gesturePriority: 30, threshold: 10, blurOnStart: true, canStart: (t17) => this.canStart(t17), onWillStart: () => this.onWillStart(), onStart: () => this.onStart(), onMove: (t17) => this.onMove(t17), onEnd: (t17) => this.onEnd(t17) }), this.updateState()) : f('[ion-menu] - Must have a "content" element to listen for drag events on.');
+      null !== t16 ? (this.el.contains(t16) && f(`[ion-menu] - The "contentId" should refer to the main view's ion-content, not the ion-content inside of the ion-menu.`), this.contentEl = t16, t16.classList.add("menu-content"), this.typeChanged(this.type, void 0), this.sideChanged(), m4._register(this), this.menuChanged(), this.gesture = (yield import("./p-Cl0B-RWe-B4SJBYPM.js")).createGesture({ el: document, gestureName: "menu-swipe", gesturePriority: 30, threshold: 10, blurOnStart: true, canStart: (t17) => this.canStart(t17), onWillStart: () => this.onWillStart(), onStart: () => this.onStart(), onMove: (t17) => this.onMove(t17), onEnd: (t17) => this.onEnd(t17) }), this.updateState()) : f('[ion-menu] - Must have a "content" element to listen for drag events on.');
     });
   }
   componentWillLoad() {
@@ -8538,7 +8538,7 @@ var d13 = Vn(class extends I {
   connectedCallback() {
     return __async(this, null, function* () {
       let t16 = 0, i16 = 0.81;
-      "ios" === y2(this) && (t16 = -0.46, i16 = 1), this.rotateFactor = t16, this.scaleFactor = i16, this.gesture = (yield import("./p-Cl0B-RWe-H6NRW7E2.js")).createGesture({ el: this.el, gestureName: "picker-swipe", gesturePriority: 100, threshold: 0, passive: false, onStart: (t17) => this.onStart(t17), onMove: (t17) => this.onMove(t17), onEnd: (t17) => this.onEnd(t17) }), this.gesture.enable(), this.tmrId = setTimeout((() => {
+      "ios" === y2(this) && (t16 = -0.46, i16 = 1), this.rotateFactor = t16, this.scaleFactor = i16, this.gesture = (yield import("./p-Cl0B-RWe-B4SJBYPM.js")).createGesture({ el: this.el, gestureName: "picker-swipe", gesturePriority: 100, threshold: 0, passive: false, onStart: (t17) => this.onStart(t17), onMove: (t17) => this.onMove(t17), onEnd: (t17) => this.onEnd(t17) }), this.gesture.enable(), this.tmrId = setTimeout((() => {
         this.noAnimate = false, this.refresh(true);
       }), 250);
     });
@@ -8970,7 +8970,7 @@ var M7 = Vn(class extends I {
             }
           } else this.state = 2, m25(i16, o14, a16);
         }));
-      }, this.scrollEl.addEventListener("scroll", this.scrollListenerCallback), this.gesture = (yield import("./p-Cl0B-RWe-H6NRW7E2.js")).createGesture({ el: this.scrollEl, gestureName: "refresher", gesturePriority: 31, direction: "y", threshold: 5, onStart: () => {
+      }, this.scrollEl.addEventListener("scroll", this.scrollListenerCallback), this.gesture = (yield import("./p-Cl0B-RWe-B4SJBYPM.js")).createGesture({ el: this.scrollEl, gestureName: "refresher", gesturePriority: 31, direction: "y", threshold: 5, onStart: () => {
         this.pointerDown = true, this.didRefresh || u15(this.elementToTransform, "0px"), 0 === n14 && (n14 = 0.16 * this.scrollEl.clientHeight);
       }, onMove: (e17) => {
         this.lastVelocityY = e17.velocityY;
@@ -8985,7 +8985,7 @@ var M7 = Vn(class extends I {
       const t16 = c(r29).querySelector("circle"), n14 = this.el.querySelector("ion-refresher-content .refresher-pulling-icon"), o14 = c(i16).querySelector("circle");
       null !== t16 && null !== o14 && P((() => {
         t16.style.setProperty("animation", "none"), i16.style.setProperty("animation-delay", "-655ms"), o14.style.setProperty("animation-delay", "-655ms");
-      })), this.gesture = (yield import("./p-Cl0B-RWe-H6NRW7E2.js")).createGesture({ el: this.scrollEl, gestureName: "refresher", gesturePriority: 31, direction: "y", threshold: 5, canStart: () => 8 !== this.state && 32 !== this.state && 0 === this.scrollEl.scrollTop, onStart: (e17) => {
+      })), this.gesture = (yield import("./p-Cl0B-RWe-B4SJBYPM.js")).createGesture({ el: this.scrollEl, gestureName: "refresher", gesturePriority: 31, direction: "y", threshold: 5, canStart: () => 8 !== this.state && 32 !== this.state && 0 === this.scrollEl.scrollTop, onStart: (e17) => {
         this.progress = 0, e17.data = { animation: void 0, didStart: false, cancelled: false };
       }, onMove: (r30) => {
         if (r30.velocityY < 0 && 0 === this.progress && !r30.data.didStart || r30.data.cancelled) r30.data.cancelled = true;
@@ -9030,7 +9030,7 @@ var M7 = Vn(class extends I {
       const e16 = this.el.closest(a2);
       e16 ? e2(e16, (() => __async(this, null, function* () {
         const r29 = e16.querySelector(t3);
-        this.scrollEl = yield i4(null != r29 ? r29 : e16), this.backgroundContentEl = yield e16.getBackgroundElement(), this.contentFullscreen = e16.fullscreen, (yield y7(this.el, y2(this))) ? this.setupNativeRefresher(e16) : (this.gesture = (yield import("./p-Cl0B-RWe-H6NRW7E2.js")).createGesture({ el: e16, gestureName: "refresher", gesturePriority: 31, direction: "y", threshold: 20, passive: false, canStart: () => this.canStart(), onStart: () => this.onStart(), onMove: (e17) => this.onMove(e17), onEnd: () => this.onEnd() }), this.disabledChanged());
+        this.scrollEl = yield i4(null != r29 ? r29 : e16), this.backgroundContentEl = yield e16.getBackgroundElement(), this.contentFullscreen = e16.fullscreen, (yield y7(this.el, y2(this))) ? this.setupNativeRefresher(e16) : (this.gesture = (yield import("./p-Cl0B-RWe-B4SJBYPM.js")).createGesture({ el: e16, gestureName: "refresher", gesturePriority: 31, direction: "y", threshold: 20, passive: false, canStart: () => this.canStart(), onStart: () => this.onStart(), onMove: (e17) => this.onMove(e17), onEnd: () => this.onEnd() }), this.disabledChanged());
       }))) : p2(this.el);
     });
   }
@@ -9215,7 +9215,7 @@ var b13 = Vn(class extends I {
   connectedCallback() {
     return __async(this, null, function* () {
       const t16 = m2(this.el);
-      t16 && (this.scrollEl = yield i4(t16)), this.gesture = (yield import("./p-Cl0B-RWe-H6NRW7E2.js")).createGesture({ el: this.el, gestureName: "reorder", gesturePriority: 110, threshold: 0, direction: "y", passive: false, canStart: (t17) => this.canStart(t17), onStart: (t17) => this.onStart(t17), onMove: (t17) => this.onMove(t17), onEnd: () => this.onEnd() }), this.disabledChanged();
+      t16 && (this.scrollEl = yield i4(t16)), this.gesture = (yield import("./p-Cl0B-RWe-B4SJBYPM.js")).createGesture({ el: this.el, gestureName: "reorder", gesturePriority: 110, threshold: 0, direction: "y", passive: false, canStart: (t17) => this.canStart(t17), onStart: (t17) => this.onStart(t17), onMove: (t17) => this.onMove(t17), onEnd: () => this.onEnd() }), this.disabledChanged();
     });
   }
   disconnectedCallback() {
@@ -10429,7 +10429,7 @@ var C4 = Vn(class extends I {
   }
   componentDidLoad() {
     return __async(this, null, function* () {
-      this.didLoad = true, this.rootChanged(), this.gesture = (yield import("./p-Sh0ICmPV-C2JUZEIM.js")).createSwipeBackGesture(this.el, this.canStart.bind(this), this.onStart.bind(this), this.onMove.bind(this), this.onEnd.bind(this)), this.swipeGestureChanged();
+      this.didLoad = true, this.rootChanged(), this.gesture = (yield import("./p-Sh0ICmPV-DUA6KA3K.js")).createSwipeBackGesture(this.el, this.canStart.bind(this), this.onStart.bind(this), this.onMove.bind(this), this.onEnd.bind(this)), this.swipeGestureChanged();
     });
   }
   connectedCallback() {
@@ -13207,7 +13207,7 @@ var x12 = Vn(class extends I {
   constructor(e16) {
     super(), false !== e16 && this.__registerHost(), this.__attachShadow(), this.ionChange = Zt(this, "ionChange", 7), this.ionInput = Zt(this, "ionInput", 7), this.ionFocus = Zt(this, "ionFocus", 7), this.ionBlur = Zt(this, "ionBlur", 7), this.ionKnobMoveStart = Zt(this, "ionKnobMoveStart", 7), this.ionKnobMoveEnd = Zt(this, "ionKnobMoveEnd", 7), this.rangeId = "ion-r-" + B9++, this.didLoad = false, this.noUpdate = false, this.hasFocus = false, this.inheritedAttributes = {}, this.contentEl = null, this.initialContentScrollY = true, this.focusFromPointer = false, this.ratioA = 0, this.ratioB = 0, this.name = this.rangeId, this.dualKnobs = false, this.min = 0, this.max = 100, this.pin = false, this.pinFormatter = (e17) => Math.round(e17), this.snaps = false, this.step = 1, this.ticks = true, this.disabled = false, this.value = 0, this.compareValues = (e17, t16) => "object" == typeof e17 && "object" == typeof t16 ? e17.lower !== t16.lower || e17.upper !== t16.upper : e17 !== t16, this.clampBounds = (e17) => b(this.min, e17, this.max), this.ensureValueInBounds = (e17) => this.dualKnobs ? { lower: this.clampBounds(e17.lower), upper: this.clampBounds(e17.upper) } : this.clampBounds(e17), this.labelPlacement = "start", this.setupGesture = () => __async(this, null, function* () {
       const e17 = this.rangeSlider;
-      e17 && (this.gesture = (yield import("./p-Cl0B-RWe-H6NRW7E2.js")).createGesture({ el: e17, gestureName: "range", gesturePriority: 100, threshold: 10, onStart: () => this.onStart(), onMove: (e18) => this.onMove(e18), onEnd: (e18) => this.onEnd(e18) }), this.gesture.enable(!this.disabled));
+      e17 && (this.gesture = (yield import("./p-Cl0B-RWe-B4SJBYPM.js")).createGesture({ el: e17, gestureName: "range", gesturePriority: 100, threshold: 10, onStart: () => this.onStart(), onMove: (e18) => this.onMove(e18), onEnd: (e18) => this.onEnd(e18) }), this.gesture.enable(!this.disabled));
     }), this.setupActivatedObserver = () => {
       const e17 = this.el.shadowRoot.querySelector(".range-knob-handle-a"), t16 = this.el.shadowRoot.querySelector(".range-knob-handle-b"), a16 = () => {
         this.activatedKnob = (null == e17 ? void 0 : e17.classList.contains("ion-activated")) ? "A" : (null == t16 ? void 0 : t16.classList.contains("ion-activated")) ? "B" : void 0;
@@ -13612,7 +13612,7 @@ var d21 = Vn(class extends I {
     return __async(this, null, function* () {
       this.segmentViewEl = this.getSegmentView(), this.setCheckedClasses(), d2((() => {
         this.scrollActiveButtonIntoView(false);
-      })), this.gesture = (yield import("./p-Cl0B-RWe-H6NRW7E2.js")).createGesture({ el: this.el, gestureName: "segment", gesturePriority: 100, threshold: 0, passive: false, onStart: (t16) => this.onStart(t16), onMove: (t16) => this.onMove(t16), onEnd: (t16) => this.onEnd(t16) }), this.gestureChanged(), this.disabled && this.disabledChanged(), this.updateSegmentView(false);
+      })), this.gesture = (yield import("./p-Cl0B-RWe-B4SJBYPM.js")).createGesture({ el: this.el, gestureName: "segment", gesturePriority: 100, threshold: 0, passive: false, onStart: (t16) => this.onStart(t16), onMove: (t16) => this.onMove(t16), onEnd: (t16) => this.onEnd(t16) }), this.gestureChanged(), this.disabled && this.disabledChanged(), this.updateSegmentView(false);
     });
   }
   onStart(t16) {
@@ -14336,7 +14336,7 @@ var u18 = Vn(class extends I {
   constructor(t16) {
     super(), false !== t16 && this.__registerHost(), this.__attachShadow(), this.ionChange = Zt(this, "ionChange", 7), this.ionFocus = Zt(this, "ionFocus", 7), this.ionBlur = Zt(this, "ionBlur", 7), this.inputId = "ion-tg-" + y13++, this.inputLabelId = this.inputId + "-lbl", this.helperTextId = this.inputId + "-helper-text", this.errorTextId = this.inputId + "-error-text", this.lastDrag = 0, this.inheritedAttributes = {}, this.didLoad = false, this.activated = false, this.isInvalid = false, this.name = this.inputId, this.checked = false, this.disabled = false, this.value = "on", this.enableOnOffLabels = n.get("toggleOnOffLabels"), this.labelPlacement = "start", this.required = false, this.setupGesture = () => __async(this, null, function* () {
       const { toggleTrack: t17 } = this;
-      t17 && (this.gesture = (yield import("./p-Cl0B-RWe-H6NRW7E2.js")).createGesture({ el: t17, gestureName: "toggle", gesturePriority: 100, threshold: 5, passive: false, onStart: () => this.onStart(), onMove: (t18) => this.onMove(t18), onEnd: (t18) => this.onEnd(t18) }), this.disabledChanged());
+      t17 && (this.gesture = (yield import("./p-Cl0B-RWe-B4SJBYPM.js")).createGesture({ el: t17, gestureName: "toggle", gesturePriority: 100, threshold: 5, passive: false, onStart: () => this.onStart(), onMove: (t18) => this.onMove(t18), onEnd: (t18) => this.onEnd(t18) }), this.disabledChanged());
     }), this.onKeyDown = (t17) => {
       " " === t17.key && (t17.preventDefault(), this.disabled || this.toggleChecked());
     }, this.onClick = (t17) => {

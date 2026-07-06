@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonBadge, IonTabBar, IonTabButton, IonIcon, IonButton, IonButtons } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonBadge, IonTabBar, IonTabButton, IonIcon, IonButton, IonButtons } from '@ionic/angular/standalone';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -10,7 +10,22 @@ import { ApiService } from '../services/api.service';
   templateUrl: './perfil.page.html',
   styleUrls: ['./perfil.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonBadge, IonTabBar, IonTabButton, IonIcon, IonButton, IonButtons, CommonModule, FormsModule, RouterModule]
+  imports: [IonContent, 
+    IonHeader, 
+    IonTitle, 
+    IonToolbar,  
+    IonItem, 
+    IonLabel, 
+    IonCard, 
+    IonCardHeader, 
+    IonCardTitle, 
+    IonCardContent, 
+    IonBadge, 
+    IonTabBar, 
+    IonTabButton, 
+    IonIcon, 
+    IonButton, 
+    IonButtons, CommonModule, FormsModule, RouterModule]
 })
 export class PerfilPage implements OnInit {
   historialOrdenes: any[] = [];

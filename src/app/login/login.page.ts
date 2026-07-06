@@ -12,8 +12,14 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./login.page.scss'],
   standalone: true,
   imports: [
-    IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent,
-    IonItem, IonInput, IonLabel, IonButton, CommonModule, FormsModule
+  IonContent, 
+  IonCard, 
+  IonCardHeader, 
+  IonCardTitle, 
+  IonCardContent,
+  IonItem, 
+  IonInput,  
+  IonButton, CommonModule, FormsModule
   ]
 })
 export class LoginPage implements OnInit {
@@ -66,6 +72,7 @@ export class LoginPage implements OnInit {
   registers(){
     this.router.navigate(['/register']);
   }
+  
 
   ngOnInit() {
   }

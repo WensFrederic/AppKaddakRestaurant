@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { IonContent, IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonItem, IonCardHeader, IonList, IonLabel, IonButton, ToastController, IonIcon, IonTabBar, IonTabButton, IonSegment, IonSegmentButton, IonInput, LoadingController } from '@ionic/angular/standalone';
+import { IonContent, IonItem, IonLabel, IonButton, ToastController, IonIcon, IonTabBar, IonTabButton, IonSegment, IonSegmentButton, IonInput, LoadingController } from '@ionic/angular/standalone';
 import { CartService } from '../services/cart.service';
 import { ApiService } from '../services/api.service';
 
@@ -11,7 +11,16 @@ import { ApiService } from '../services/api.service';
   templateUrl: './mipedido.page.html',
   styleUrls: ['./mipedido.page.scss'],
   standalone: true,
-  imports: [IonContent, IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonItem, IonCardHeader, IonList, IonLabel, IonButton, IonIcon, IonTabBar, IonTabButton, IonSegment, IonSegmentButton, IonInput, CommonModule, FormsModule, RouterModule]
+  imports: [IonContent, 
+    IonItem,   
+    IonLabel, 
+    IonButton, 
+    IonIcon, 
+    IonTabBar, 
+    IonTabButton, 
+    IonSegment, 
+    IonSegmentButton, 
+    IonInput, CommonModule, FormsModule, RouterModule]
 })
 export class MipedidoPage implements OnInit {
   cartItems: any[] = [];

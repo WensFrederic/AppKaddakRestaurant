@@ -1,78 +1,97 @@
 <ion-content>
 
-  <ion-card>
+  <div class="register-container">
 
-    <ion-card-header>
-      <ion-card-title>Crea tu cuenta</ion-card-title>
-      <ion-card-subtitle>Es rápido y fácil</ion-card-subtitle>
-    </ion-card-header>
+    <div class="register-card">
 
-    <ion-card-content>
+      <div class="header">
+        <img src="assets/kaddakrestaurant11.jpg" alt="">
+        <h1 class="title">
+          Crea tu cuenta
+        </h1>
 
-      <ion-item>
-        <ion-input
-          label="Nombre Completo"
-          labelPlacement="floating"
-          placeholder="Ingrese su nombre">
-        </ion-input>
-      </ion-item>
+        <p class="subtitle">
+          Es rápido y fácil
+        </p>
 
-      <ion-item>
-        <ion-input
-          type="email"
-          label="Correo Electrónico"
-          labelPlacement="floating"
-          placeholder="ejemplo@email.com">
-        </ion-input>
-      </ion-item>
+      </div>
 
-      <ion-item>
-        <ion-input
-          type="tel"
-          label="Teléfono"
-          labelPlacement="floating"
-          placeholder="809-000-0000">
-        </ion-input>
-      </ion-item>
+      <div class="form">
 
-      <ion-item>
-        <ion-input
-          type="password"
-          label="Contraseña"
-          labelPlacement="floating"
-          placeholder="Ingrese su contraseña">
-        </ion-input>
-      </ion-item>
+        <ion-item class="input-item">
+          <ion-input
+            label="Nombre completo"
+            labelPlacement="floating"
+            type="text">
+          </ion-input>
+        </ion-item>
 
-      <ion-item>
-        <ion-input
-          type="password"
-          label="Confirmar Contraseña"
-          labelPlacement="floating"
-          placeholder="Repita su contraseña">
-        </ion-input>
-      </ion-item>
+        <ion-item class="input-item">
+          <ion-input
+            label="Correo electrónico"
+            labelPlacement="floating"
+            type="email">
+          </ion-input>
+        </ion-item>
 
-      <div class="terms-container">
+        <ion-item class="input-item">
+          <ion-input
+            label="Teléfono"
+            labelPlacement="floating"
+            type="tel">
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-input
+            label="Contraseña"
+            labelPlacement="floating"
+            type="password">
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-input
+            label="Confirmar contraseña"
+            placeholder="Contraseña"
+            labelPlacement="floating"
+            type="password">
+          </ion-input>
+        </ion-item>
+
+      </div>
+
+      <div class="terms">
+
         <ion-checkbox></ion-checkbox>
 
         <span>
-          Acepto los
-          <a href="#">términos y condiciones y la Politica de Privacidad</a>
+          Acepto los Términos y Condiciones y la Política de Privacidad 
         </span>
+
       </div>
 
-      <ion-button expand="block" class="register-btn" (click)="menus()">
+      <ion-button
+        expand="block"
+        class="register-button" 
+        click="logins()">
         Registrarme
       </ion-button>
 
-      <div class="login-link">
-        <p>¿Ya tienes una cuenta?</p>
-        <a href="#">Iniciar Sesión</a>
+      <div class="login">
+
+        <span>
+          ¿Ya tienes cuenta?
+        </span>
+
+        <a click="menus()">
+          Inicia sesión
+        </a>
+
       </div>
 
-    </ion-card-content>
+    </div>
 
-  </ion-card>
+  </div>
 
 </ion-content>

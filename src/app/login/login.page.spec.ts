@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LoginPage } from './login.page';
-import {IonContent, IonCard,IonCardHeader, IonCardTitle, 
-  IonCardContent,IonItem,IonInput,IonLabel} from '@ionic/angular/standalone';
+import {IonContent} from '@ionic/angular/standalone';
   
 describe('LoginPage', () => {
   let component: LoginPage;
