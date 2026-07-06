@@ -1,0 +1,32 @@
+<ion-content>
+     <div class="Card">
+       <ion-card>
+          <ion-card-header>
+            <ion-card-title>Bienvenido</ion-card-title>
+         </ion-card-header>
+           <h4>Iniciar seccion para continuar</h4>
+         <ion-card-content>
+          <ion-item>
+          <ion-input labelPlacement="floating" label="Usuario / Correo" type="text" [(ngModel)]="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input labelPlacement="floating" label="Contraseña" type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+           </ion-card-content>
+             <ion-button expand="block" shape="round" color="primary" class="login-btn" (click)="login()">Iniciar Sesión</ion-button>
+             <div style="text-align: center; margin-top: 15px;">
+               <p style="color: #666; font-size: 14px; margin-bottom: 5px;">¿No tienes una cuenta aún?</p>
+               <ion-button fill="clear" color="secondary" (click)="registers()" style="font-weight: bold;">
+                 Crear cuenta para clientes
+               </ion-button>
+             </div>
+             
+             <p style="text-align: center; margin-top: 20px; color: #888;">o continúa con</p>
+              <div class="social-icons" style="display: flex; justify-content: center; gap: 15px;">
+                 <img src="assets/google-icon.png" alt="Google" style="width: 40px;">
+                 <img src="assets/facebookicono.png" alt="Facebook" style="width: 40px;">
+                 <img src="assets/appleicono.png" alt="Apple" style="width: 40px;">
+              </div>  
+        </ion-card>
+      </div>  
+</ion-content>
