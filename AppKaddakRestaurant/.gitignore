@@ -1,0 +1,22 @@
+# Angular
+.angular/
+dist/
+
+# Ionic
+www/
+
+# Node.js
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Visual Studio Code
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
