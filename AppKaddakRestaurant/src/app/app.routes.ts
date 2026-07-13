@@ -42,40 +42,12 @@ export const routes: Routes = [
     path: 'admin-platos',
     loadComponent: () =>
       import('./admin-platos/admin-platos.page').then(m => m.AdminPlatosPage),
+  },  {
+    path: 'plato',
+    loadComponent: () => import('./platospage/plato/plato.page').then( m => m.PlatoPage)
   },
 
-  {
-    path: 'homes',
-    loadComponent: () =>
-      import('./homespages/homes/homes.page').then(m => m.HomesPage),
-  },
 
-  {
-    path: 'detalle-productos',
-    loadComponent: () =>
-      import('./detallepages/detalle-productos/detalle-productos.page')
-        .then(m => m.DetalleProductosPage),
-  },
-
-  {
-    path: 'carritos',
-    loadComponent: () =>
-      import('./carritospages/carritos/carritos.page')
-        .then(m => m.CarritosPage),
-  },
-
-  {
-    path: 'checkout',
-    loadComponent: () =>
-      import('./checkoutpages/checkout/checkout.page')
-        .then(m => m.CheckoutPage),
-  },
-
-  {
-    path: 'perfil',
-    loadComponent: () =>
-      import('./perfilpages/perfil/perfil.page')
-        .then(m => m.PerfilPage),
-  },
+ 
 
 ];

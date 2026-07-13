@@ -1,33 +1,16 @@
-<ion-content>
+<ion-content fullscreen>
 
-<<<<<<< HEAD:src/app/menu/menu.page.html
-  <!-- ==========================================
-       CONTENEDOR PRINCIPAL
-  =========================================== -->
+  <!--=========================================
+      CONTENEDOR PRINCIPAL
+  ==========================================-->
 
-  <div class="home-container">
+  <div class="menu-container">
 
-    <!-- ==========================================
-         HEADER
-    =========================================== -->
+    <!--=========================================
+        HEADER
+    ==========================================-->
 
     <header class="header">
-=======
-  <!-- Header -->
-  <div class="header">
-    <div>
-      <h2>¡Hola! 👋</h2>
-      <p>¿Qué vas a ordenar hoy?</p>
-    </div>
-
-    <div class="icons">
-      <div class="cart-icon-wrapper" routerLink="/mipedido" style="position: relative; cursor: pointer;">
-        <ion-icon name="cart-outline" style="font-size: 28px; color: #333;"></ion-icon>
-        <span *ngIf="cartItemsCount > 0" style="position: absolute; top: -6px; right: -6px; background: #ff4757; color: white; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; display: flex; align-items: center; justify-content: center; font-weight: bold;">{{ cartItemsCount }}</span>
-      </div>
-    </div>
-  </div>
->>>>>>> 686c17552ecf3729d79bf9010e2ab040000ac55b:AppKaddakRestaurant/src/app/menu/menu.page.html
 
       <div class="header-info">
 
@@ -39,110 +22,82 @@
           ¿Qué vas a ordenar hoy?
         </p>
 
-<<<<<<< HEAD:src/app/menu/menu.page.html
       </div>
 
       <div class="header-actions">
 
-        <ion-button fill="clear" class="icon-button">
+        <button class="header-icon">
 
           <ion-icon
             name="notifications-outline">
           </ion-icon>
 
-        </ion-button>
+        </button>
 
-        <ion-button fill="clear" class="icon-button">
+        <button
+          class="header-icon cart-button"
+          routerLink="/mipedido">
 
           <ion-icon
             name="cart-outline">
           </ion-icon>
-=======
-  <div class="categories">
-    <!-- Static option for Popular/All -->
-    <div class="category">
-      <div class="circle active">🍜</div>
-      <span>Todos</span>
-    </div>
 
-    <!-- Dynamic categories -->
-    <div class="category" *ngFor="let cat of categorias">
-      <div class="circle">🍽️</div>
-      <span>{{ cat.nombre_categoria }}</span>
-    </div>
-  </div>
->>>>>>> 686c17552ecf3729d79bf9010e2ab040000ac55b:AppKaddakRestaurant/src/app/menu/menu.page.html
+          <span
+            class="cart-badge"
+            *ngIf="cartItemsCount > 0">
 
-        </ion-button>
+            {{ cartItemsCount }}
+
+          </span>
+
+        </button>
 
       </div>
 
     </header>
 
-    <!-- ==========================================
-         BUSCADOR
-    =========================================== -->
+    <!--=========================================
+        BUSCADOR
+    ==========================================-->
 
-    <div class="search-section">
+    <section class="search-section">
 
       <ion-searchbar
+
+        class="search-bar"
+
         placeholder="Buscar tu plato favorito..."
-        class="search-bar">
+                                                 >
 
-<<<<<<< HEAD:src/app/menu/menu.page.html
       </ion-searchbar>
+      <!--(ionInput)="buscarProducto()"
+        [(ngModel)]="textoBuscar"--> 
+    </section>
 
-    </div>
-
-    <!-- ==========================================
-         CATEGORÍAS
-    =========================================== -->
+    <!--=========================================
+        CATEGORÍAS
+    ==========================================-->
 
     <section class="categories">
-=======
-  <!-- Recomendados -->
 
-  <div class="section-title">
-    <h2>Recomendados</h2>
-    <span>Ver todos</span>
-  </div>
+      <button
+        class="category active">
 
-  <!-- Card Principal -->
-
-  <div class="featured-card">
-
-    <img src="assets/images/burger.jpg">
-
-    <div class="info">
-      <h3>Hamburguesa Kaddak</h3>
-      <p>
-        Carne 100% fresca,
-        queso cheddar y salsa especial
-      </p>
-      <h4>$12.50</h4>
-    </div>
-    <ion-button shape="round" (click)="agregarAlCarrito({id: 'promo1', nombre_comida: 'Hamburguesa Kaddak', precio: 12.50})">
-      +
-    </ion-button>
-  </div>
->>>>>>> 686c17552ecf3729d79bf9010e2ab040000ac55b:AppKaddakRestaurant/src/app/menu/menu.page.html
-
-      <div class="category active">
-
-<<<<<<< HEAD:src/app/menu/menu.page.html
         <div class="category-icon">
 
-          <ion-icon
-            name="flame">
-          </ion-icon>
+          🔥
 
         </div>
 
-        <span>Popular</span>
+        <span>
 
-      </div>
+          Popular
 
-      <div class="category">
+        </span>
+
+      </button>
+
+      <button class="category">
 
         <div class="category-icon">
 
@@ -150,11 +105,15 @@
 
         </div>
 
-        <span>Pizza</span>
+        <span>
 
-      </div>
+          Pizza
 
-      <div class="category">
+        </span>
+
+      </button>
+
+      <button class="category">
 
         <div class="category-icon">
 
@@ -162,11 +121,15 @@
 
         </div>
 
-        <span>Burgers</span>
+        <span>
 
-      </div>
+          Burgers
 
-      <div class="category">
+        </span>
+
+      </button>
+
+      <button class="category">
 
         <div class="category-icon">
 
@@ -174,42 +137,56 @@
 
         </div>
 
-        <span>Bebidas</span>
+        <span>
 
-      </div>
+          Bebidas
 
-      <div class="category">
+        </span>
+
+      </button>
+
+      <button class="category">
 
         <div class="category-icon">
 
-          🧁
+          🍰
 
         </div>
 
-        <span>Postres</span>
+        <span>
 
-      </div>
+          Postres
+
+        </span>
+
+      </button>
 
     </section>
 
-    <!-- ==========================================
-         BANNER PROMOCIONAL
-    =========================================== -->
+    <!--=========================================
+        BANNER
+    ==========================================-->
 
     <section class="banner">
 
       <div class="banner-content">
 
         <h3>
+
           Pide sin hacer la fila
+
         </h3>
 
         <p>
+
           Ordena desde tu mesa
+          <br>
           y ahorra tiempo.
+
         </p>
 
-        <ion-button class="order-button">
+        <ion-button
+          class="order-button">
 
           Ordenar ahora
 
@@ -220,18 +197,20 @@
       <div class="banner-image">
 
         <img
+
           src="assets/fotologin.png"
-          alt="Banner">
+
+          alt="Banner Kaddak">
 
       </div>
 
     </section>
 
-    <!-- ==========================================
-         ENCABEZADO RECOMENDADOS
-    =========================================== -->
+    <!--=========================================
+        ENCABEZADO PRODUCTOS
+    ==========================================-->
 
-    <section class="recommended-header">
+    <section class="section-header">
 
       <h3>
 
@@ -247,21 +226,22 @@
 
     </section>
 
-    <!-- ==========================================
-         PRODUCTO DESTACADO
-    =========================================== -->
+
+        <!--=========================================
+        PRODUCTO DESTACADO
+    ==========================================-->
 
     <section class="featured-product">
 
-      <div class="product-image">
+      <div class="featured-image">
 
         <img
-          src="assets/comida.jpg"
-          alt="Hamburguesa">
+          src="assets/fotologin.png"
+          alt="Hamburguesa Kaddak">
 
       </div>
 
-      <div class="product-information">
+      <div class="featured-info">
 
         <h4>
 
@@ -272,13 +252,14 @@
         <p>
 
           Carne 100% fresca,
-          queso,
-          lechuga
+          queso cheddar,
+          lechuga,
+          tomate
           y salsa especial.
 
         </p>
 
-        <span class="price">
+        <span class="featured-price">
 
           $12.50
 
@@ -286,180 +267,158 @@
 
       </div>
 
-      <div class="product-action">
+      <div class="featured-action">
 
-        <ion-button
-          fill="solid"
-          shape="round"
-          class="add-button">
+        <button class="add-button">
 
           <ion-icon
             name="add">
           </ion-icon>
 
-        </ion-button>
+        </button>
 
       </div>
 
     </section>
 
-    <!-- ==========================================
-         PRODUCTOS
-    =========================================== -->
+    <!--=========================================
+        LISTA DE PRODUCTOS
+    ==========================================-->
 
-    <section class="products">
-
-      <div class="product-card">
-
-        <img
-          src="assets/comida.jpg"
-          alt="Pizza">
-
-        <h4>
-
-          Pizza Especial
-
-        </h4>
-
-        <span>
-
-          $14.90
-
-        </span>
-
-      </div>
+    <section class="products-grid">
 
       <div class="product-card">
 
-        <img
-          src="assets/comida.jpg"
-          alt="Pasta">
+        <div class="product-image">
 
-        <h4>
+          <img
+            src="assets/comida.jpg"
+            alt="Pizza Especial">
 
-          Pasta Alfredo
+        </div>
 
-        </h4>
+        <div class="product-content">
 
-        <span>
+          <h4>
 
-          $11.90
+            Pizza Especial
 
-        </span>
+          </h4>
 
-      </div>
+          <span class="product-price">
 
-     <div class="product-card">
+            $14.90
 
-        <img
-          src="assets/comida.jpg"
-          alt="Pizza">
+          </span>
 
-        <h4>
-
-          Pizza Especial
-
-        </h4>
-
-        <span>
-
-          $14.90
-
-        </span>
+        </div>
 
       </div>
+
       <div class="product-card">
 
-        <img
-          src="assets/comida.jpg"
-          alt="Pizza">
+        <div class="product-image">
 
-        <h4>
+          <img
+            src="assets/comida.jpg"
+            alt="Pasta Alfredo">
 
-          Pizza Especial
+        </div>
 
-        </h4>
+        <div class="product-content">
 
-        <span>
+          <h4>
 
-          $14.90
+            Pasta Alfredo
 
-        </span>
+          </h4>
 
-      </div>
-        <div class="product-card">
+          <span class="product-price">
 
-        <img
-          src="assets/comida.jpg"
-          alt="Pizza">
+            $11.90
 
-        <h4>
+          </span>
 
-          Pizza Especial
-
-        </h4>
-
-        <span>
-
-          $14.90
-
-        </span>
+        </div>
 
       </div>
+
       <div class="product-card">
 
-        <img
-          src="assets/comida.jpg"
-          alt="Pizza">
+        <div class="product-image">
 
-        <h4>
+          <img
+            src="assets/comida.jpg"
+            alt="Ensalada">
 
-          Pizza Especial
+        </div>
 
-        </h4>
+        <div class="product-content">
 
-        <span>
+          <h4>
 
-          $14.90
+            Ensalada César
 
-        </span>
+          </h4>
 
-      </div> 
+          <span class="product-price">
+
+            $8.50
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="product-card">
+
+        <div class="product-image">
+
+          <img
+            src="assets/comida.jpg"
+            alt="Limonada">
+
+        </div>
+
+        <div class="product-content">
+
+          <h4>
+
+            Limonada Natural
+
+          </h4>
+
+          <span class="product-price">
+
+            $3.90
+
+          </span>
+
+        </div>
+
+      </div>
 
     </section>
 
-=======
-  <div class="food-grid">
-    <div class="food-card" *ngFor="let comida of comidas">
-      <img [src]="comida.imagen || 'assets/images/burger.jpg'">
-      <h4>{{ comida.nombre_comida }}</h4>
-      <div class="price-row">
-        <span>${{ comida.precio }}</span>
-        <ion-button (click)="agregarAlCarrito(comida)">
-          +
-        </ion-button>
-      </div>
-    </div>
->>>>>>> 686c17552ecf3729d79bf9010e2ab040000ac55b:AppKaddakRestaurant/src/app/menu/menu.page.html
   </div>
 
 </ion-content>
 
-<!-- ==========================================
-     BOTTOM NAVIGATION
-=========================================== -->
+<!--=========================================
+    FOOTER
+==========================================-->
 
-<<<<<<< HEAD:src/app/menu/menu.page.html
 <ion-footer>
 
   <ion-toolbar>
 
     <div class="bottom-navigation">
 
-      <div class="nav-item active">
+      <button class="nav-item active">
 
         <ion-icon
-          name="home">
+          name="home-outline">
         </ion-icon>
 
         <span>
@@ -468,12 +427,14 @@
 
         </span>
 
-      </div>
+      </button>
 
-      <div class="nav-item">
+      <button
+        class="nav-item"
+        routerLink="/menu">
 
         <ion-icon
-          name="restaurant">
+          name="restaurant-outline">
         </ion-icon>
 
         <span>
@@ -482,12 +443,14 @@
 
         </span>
 
-      </div>
+      </button>
 
-      <div class="nav-item">
+      <button
+        class="nav-item"
+        routerLink="/mipedido">
 
         <ion-icon
-          name="clipboard">
+          name="receipt-outline">
         </ion-icon>
 
         <span>
@@ -496,12 +459,14 @@
 
         </span>
 
-      </div>
+      </button>
 
-      <div class="nav-item">
+      <button
+        class="nav-item"
+        routerLink="/perfil">
 
         <ion-icon
-          name="person">
+          name="person-outline">
         </ion-icon>
 
         <span>
@@ -510,29 +475,10 @@
 
         </span>
 
-      </div>
+      </button>
 
     </div>
 
   </ion-toolbar>
 
 </ion-footer>
-=======
-<ion-tab-bar slot="bottom">
-  <ion-tab-button routerLink="/menu">
-    <ion-icon name="restaurant"></ion-icon>
-    <ion-label>Menú</ion-label>
-  </ion-tab-button>
-
-  <ion-tab-button routerLink="/mipedido">
-    <ion-icon name="receipt"></ion-icon>
-    <ion-label>Pedidos</ion-label>
-  </ion-tab-button>
-
-  <ion-tab-button routerLink="/perfil">
-    <ion-icon name="person"></ion-icon>
-    <ion-label>Perfil</ion-label>
-  </ion-tab-button>
-</ion-tab-bar>
-
->>>>>>> 686c17552ecf3729d79bf9010e2ab040000ac55b:AppKaddakRestaurant/src/app/menu/menu.page.html

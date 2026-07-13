@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent,IonCard , IonItem,IonCardTitle,IonCardHeader, IonInput,IonLabel, IonButton,IonCardContent,IonIcon, ToastController} from '@ionic/angular/standalone';
+import { IonContent,IonCard , IonItem,IonCardTitle,IonCardHeader, IonInput,IonLabel, IonButton,IonCardContent,IonIcon, ToastController, IonBadge} from '@ionic/angular/standalone';
 import { ApiService } from '../services/api.service';
 
 
@@ -12,8 +12,13 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./login.page.scss'],
   standalone: true,
   imports: [
-    IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent,
-    IonItem, IonInput, IonLabel, IonButton, CommonModule, FormsModule
+    IonContent, 
+  
+    IonItem, 
+    IonInput, 
+   
+   
+    IonButton, CommonModule, FormsModule
   ]
 })
 export class LoginPage implements OnInit {
@@ -37,10 +42,10 @@ export class LoginPage implements OnInit {
     const cleanPass = this.password.trim();
 
     // Verificación de Superusuario
-    if (cleanEmail === 'jose' && cleanPass === '041527') {
+    if (cleanEmail === 'jose' && cleanPass === '12345') {
       localStorage.setItem('userRole', 'admin');
       localStorage.setItem('userId', 'jose');
-      this.router.navigate(['/admin-platos']);
+      this.router.navigate(['/menu']);
       return;
     }
 
@@ -64,6 +69,7 @@ export class LoginPage implements OnInit {
   }
 
   registers(){
+    
     this.router.navigate(['/register']);
   }
 

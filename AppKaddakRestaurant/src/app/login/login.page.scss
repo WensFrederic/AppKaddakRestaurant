@@ -1,203 +1,388 @@
-/* =====================================
-   CONTENEDOR PRINCIPAL
-===================================== */
+/*==================================================
+=            VARIABLES DE COLOR
+==================================================*/
+
+:root{
+    --primary-color:#FF6B00;
+    --secondary-color:#F8F8F8;
+    --text-color:#222222;
+    --text-light:#6E6E6E;
+    --border-color:#E8E8E8;
+    --background-color:#F4F4F4;
+    --white:#FFFFFF;
+    --shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+/*==================================================
+=            CONTENEDOR PRINCIPAL
+==================================================*/
 
 ion-content{
---background: url('/assets/login02.png')
-
+    --background: url(/assets/login02.png);
 }
-.card-container{
+
+.login-container{
+
     display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100%;
-    padding:20px;
-   
+
+    flex-direction:column;
+
+    min-height:100vh;
+
 }
 
-/* =====================================
-   TARJETA
-===================================== */
+/*==================================================
+=            IMAGEN SUPERIOR
+==================================================*/
+
+.login-banner{
+
+    width:100%;
+
+    height:260px;
+
+    overflow:hidden;
+
+}
+
+.login-banner img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/*==================================================
+=            TARJETA LOGIN
+==================================================*/
 
 .login-card{
-    width:100%;
-    max-width:420px;
-    border-radius:20px;
-    padding:20px;
-    background-color: white;
+
+    background:white;
+
+     transform:translateY(-80px);
+
+    border-radius:35px 35px 0 0;
+
+    padding:30px 25px;
+
+    flex:1;
+    
+    box-shadow: var(--shadow);
+    
+    border:2px solid black;
+
 }
 
-/* =====================================
-   TÍTULO
-===================================== */
+/*==================================================
+=            LOGO
+==================================================*/
 
-ion-card-title{
+.logo-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:15px;
+
+}
+
+.logo{
+
+    width:140px;
+
+}
+
+/*==================================================
+=            BIENVENIDA
+==================================================*/
+
+.welcome-section{
+
     text-align:center;
-    font-size:28px;
-    font-weight:700;
-    color:chocolate
+
+    margin-bottom:25px;
+
 }
 
-/* =====================================
-   SUBTÍTULO
-===================================== */
+.title{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:rgb(10, 9, 9);
+
+    margin:0;
+
+   font-family: Arial, Helvetica, sans-serif;
+
+}
 
 .subtitle{
-    text-align:center;
-    margin:10px 0 20px;
+
+    margin-top:8px;
+
+    color:black;
+
     font-size:16px;
-    font-weight:400;
+    
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* =====================================
-   INPUTS
-===================================== */
+/*==================================================
+=            FORMULARIO
+==================================================*/
 
-ion-item{
-    margin-bottom:15px;
-    border-radius: 20px;
+.login-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
 }
 
-/* =====================================
-   BOTÓN LOGIN
-===================================== */
+.input-item{
 
-.login-btn{
-    margin:20px;
-    height:350px;
-    font-size:10px;
+    --background:white;
+
+    --border-radius:15px;
+
+    --border-color:var(--border-color);
+
+    --border-width:1px;
+
+    --padding-start:12px;
+     
+      color :#222222;
+}
+
+/*==================================================
+=            RECUPERAR CONTRASEÑA
+==================================================*/
+
+.forgot-password{
+
+    text-align:right;
+
+    margin-top:12px;
+
+    margin-bottom:20px;
+
+}
+
+.forgot-password a{
+
+    font-size:14px;
+
+    color:black;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+
+
+}
+
+/*==================================================
+=            BOTÓN LOGIN
+==================================================*/
+
+.login-button{
+
+    --background:#FF6B00;
+
+    --border-radius:15px;
+
+    height:50px;
+
+    font-size:17px;
+
     font-weight:600;
-    width:350px;
-    margin-left: 44px;
-    background-color: chocolate;
-    border-radius: 20px;
-    color:white;
+
 }
 
-/* =====================================
-   REGISTRO
-===================================== */
+/*==================================================
+=            DIVISOR
+==================================================*/
+
+.divider{
+
+    text-align:center;
+
+    margin:25px 0 20px;
+
+    color:black;
+
+    font-size:14px;
+
+}
+
+/*==================================================
+=            REDES SOCIALES
+==================================================*/
+
+.social-login{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+.social-button{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    background:#FFFFFF;
+
+    border-radius:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.social-button img{
+
+    width:28px;
+
+    height:28px;
+
+}
+
+.social-button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/*==================================================
+=            REGISTRO
+==================================================*/
 
 .register-section{
+
+    margin-top:30px;
+
     text-align:center;
-    margin-top:15px;
-}
 
-.register-text{
-    margin-bottom:5px;
-    font-size:14px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    color:black;
-}
-
-.register-btn{
-    font-size:13px;
-    font-weight:600;
-    background-color: rgb(190, 179, 179);
-    border-radius: 20px ;
-    color: black;
-    border: 30px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-/* =====================================
-   TEXTO DIVISOR
-===================================== */
-
-.divider-text{
-    text-align:center;
-    margin-top:20px;
     font-size:15px;
-    color:black;    
-    margin-top: 5px;
+
 }
 
-/* =====================================
-   REDES SOCIALES
-===================================== */
+.register-section span{
 
-.social-icons{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:50px;
-    margin:20px 0;
+    color:black;
+
 }
 
-.social-icon{
-    width:40px;
-    height:40px;
+.register-section a{
+
+    margin-left:6px;
+
+    color:black;
+
+    font-weight:600;
+
     cursor:pointer;
-    transition:.3s;
-    border-radius: 20px;
+
+    text-decoration:none;
+
 }
 
-.social-icon:hover{
-    transform:scale(1.1);
-}
-/* =====================================
-   MOBILE SMALL
-===================================== */
+/*==================================================
+=            RESPONSIVE - MÓVIL
+==================================================*/
 
-@media (max-width:480px){
+@media(max-width:480px){
 
-    .card-container{
-        padding:15px;
+    .login-banner{
+
+        height:220px;
+
     }
 
     .login-card{
-        padding:18px;
+
+        padding:25px 20px;
+
     }
 
-    ion-card-title{
-        font-size:22px;
+    .title{
+
+        font-size:28px;
+
     }
 
-    .subtitle{
-        font-size:14px;
-    }
+    .logo{
 
-    .login-btn{
-        margin:15px;
-        height:45px;
-    }
+        width:120px;
 
-    .social-icon{
-        width:35px;
-        height:35px;
     }
 
 }
 
- /*=====================================
-   TABLETS
-===================================== */
+/*==================================================
+=            RESPONSIVE - TABLET
+==================================================*/
 
-@media (min-width:768px){
+@media(min-width:768px){
 
-    .login-card{
+    .login-container{
+
         max-width:500px;
-        padding:30px;
+
+        margin:auto;
+
     }
 
-    ion-card-title{
-        font-size:32px;
+    .login-card{
+
+        border-radius:35px;
+
+        margin-top:-50px;
+
     }
 
-    .subtitle{
-        font-size:18px;
-    }
+}
 
-    .login-btn{
-        height:55px;
-        font-size:18px;
-    }
+/*==================================================
+=            RESPONSIVE - DESKTOP
+==================================================*/
 
-    .social-icon{
-        width:45px;
-        height:45px;
+@media(min-width:1200px){
+
+    .login-container{
+
+        max-width:520px;
+
+        margin:auto;
+
     }
 
 }

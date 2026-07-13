@@ -10,7 +10,7 @@ import { ApiService } from '../services/api.service';
   templateUrl: './admin-platos.page.html',
   styleUrls: ['./admin-platos.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonInput, IonSelect, IonSelectOption, IonButton, IonList, IonCard, IonCardContent, IonIcon, IonButtons, IonBackButton, CommonModule, FormsModule, RouterModule]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonInput, IonSelect, IonSelectOption, IonButton, IonList, IonCard, IonCardContent,  IonButtons, IonBackButton, CommonModule, FormsModule, RouterModule]
 })
 export class AdminPlatosPage implements OnInit {
   categorias: any[] = [];

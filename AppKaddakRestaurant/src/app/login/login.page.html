@@ -1,32 +1,193 @@
-<ion-content>
-     <div class="Card">
-       <ion-card>
-          <ion-card-header>
-            <ion-card-title>Bienvenido</ion-card-title>
-         </ion-card-header>
-           <h4>Iniciar seccion para continuar</h4>
-         <ion-card-content>
-          <ion-item>
-          <ion-input labelPlacement="floating" label="Usuario / Correo" type="text" [(ngModel)]="email"></ion-input>
+<ion-content fullscreen>
+
+  <!-- ==========================================
+       CONTENEDOR PRINCIPAL
+  ========================================== -->
+
+  <div class="login-container">
+
+    <!-- ==========================================
+         IMAGEN SUPERIOR
+    ========================================== -->
+
+    <div class="login-banner">
+
+      
+
+    </div>
+
+    <!-- ==========================================
+         TARJETA LOGIN
+    ========================================== -->
+
+    <div class="login-card">
+
+      <!-- ==========================================
+           LOGO
+      ========================================== -->
+
+      <div class="logo-section">
+
+        <img
+          src="assets/kaddakrestaurant11.jpg"
+          alt="Logo Kaddak"
+          class="logo">
+
+      </div>
+
+      <!-- ==========================================
+           BIENVENIDA
+      ========================================== -->
+
+      <div class="welcome-section">
+
+        <h2 class="title">
+
+          Bienvenido
+
+        </h2>
+
+        <p class="subtitle">
+
+          Inicia sesión para continuar
+
+        </p>
+
+      </div>
+
+      <!-- ==========================================
+           FORMULARIO
+      ========================================== -->
+
+      <form class="login-form">
+
+        <ion-item class="input-item">
+
+          <ion-input
+            label="Usuario"
+            labelPlacement="floating"
+            type="email"
+            [(ngModel)]="email"
+            name="email">
+
+          </ion-input>
+
         </ion-item>
-        <ion-item>
-          <ion-input labelPlacement="floating" label="Contraseña" type="password" [(ngModel)]="password"></ion-input>
+
+        <ion-item class="input-item">
+
+          <ion-input
+            label="Contraseña"
+            labelPlacement="floating"
+            type="password"
+            [(ngModel)]="password"
+            name="password">
+
+          </ion-input>
+
         </ion-item>
-           </ion-card-content>
-             <ion-button expand="block" shape="round" color="primary" class="login-btn" (click)="login()">Iniciar Sesión</ion-button>
-             <div style="text-align: center; margin-top: 15px;">
-               <p style="color: #666; font-size: 14px; margin-bottom: 5px;">¿No tienes una cuenta aún?</p>
-               <ion-button fill="clear" color="secondary" (click)="registers()" style="font-weight: bold;">
-                 Crear cuenta para clientes
-               </ion-button>
-             </div>
-             
-             <p style="text-align: center; margin-top: 20px; color: #888;">o continúa con</p>
-              <div class="social-icons" style="display: flex; justify-content: center; gap: 15px;">
-                 <img src="assets/google-icon.png" alt="Google" style="width: 40px;">
-                 <img src="assets/facebookicono.png" alt="Facebook" style="width: 40px;">
-                 <img src="assets/appleicono.png" alt="Apple" style="width: 40px;">
-              </div>  
-        </ion-card>
-      </div>  
+
+      </form>
+
+      <!-- ==========================================
+           RECUPERAR CONTRASEÑA
+      ========================================== -->
+
+      <div class="forgot-password">
+       <!-- forgotpassword()-->
+        <a>
+
+          ¿Olvidaste tu contraseña?
+
+        </a>
+
+      </div>
+
+      <!-- ==========================================
+           BOTÓN LOGIN
+      ========================================== -->
+
+      <div class="button-section">
+
+        <ion-button
+          expand="block"
+          class="login-button"
+          (click)="login()">
+
+          Iniciar sesión
+
+        </ion-button>
+
+      </div>
+
+      <!-- ==========================================
+           DIVISOR
+      ========================================== -->
+
+      <div class="divider">
+
+        <span>
+
+          o continúa con
+
+        </span>
+
+      </div>
+
+      <!-- ==========================================
+           REDES SOCIALES
+      ========================================== -->
+
+      <div class="social-login">
+
+        <button class="social-button">
+
+          <img
+            src="assets/google-icon.png"
+            alt="Google">
+
+        </button>
+
+        <button class="social-button">
+
+          <img
+            src="assets/facebookicono.png"
+            alt="Facebook">
+
+        </button>
+
+        <button class="social-button">
+
+          <img
+            src="assets/appleicono.png"
+            alt="Apple">
+
+        </button>
+
+      </div>
+
+      <!-- ==========================================
+           REGISTRO
+      ========================================== -->
+
+      <div class="register-section">
+
+        <span>
+
+          ¿No tienes cuenta?
+
+        </span>
+
+        <a (click)="registers()">
+
+          Regístrate
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </ion-content>

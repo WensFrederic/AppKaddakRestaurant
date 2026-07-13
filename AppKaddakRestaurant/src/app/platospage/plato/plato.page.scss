@@ -1,0 +1,609 @@
+/*==================================================
+=            VARIABLES
+==================================================*/
+
+:root{
+
+    --primary-color:#FF6B00;
+
+    --secondary-color:#FFF7F1;
+
+    --background-color:#FFF8F2;
+
+    --text-color:#222222;
+
+    --text-light:#6F6F6F;
+
+    --white:#FFFFFF;
+
+    --shadow:0 6px 20px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+=            GENERAL
+==================================================*/
+
+ion-content{
+
+    --background:rgb(182, 202, 65);
+
+}
+
+.plato-container{
+   
+    width:100%;
+
+    max-width:500px;
+
+    margin:0 auto;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+   
+
+}
+
+/*==================================================
+=            HEADER
+==================================================*/
+
+.header{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.back-button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    background:var(--white);
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:var(--shadow);
+
+    margin-right:15px;
+
+    cursor:pointer;
+
+}
+
+.back-button ion-icon{
+
+    font-size:24px;
+
+    color:#333333;
+
+}
+
+.page-title{
+
+    margin:0;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:var(--text-color);
+
+}
+
+/*==================================================
+=            CATEGORÍAS
+==================================================*/
+
+.categories{
+
+    display:flex;
+
+    gap:20px;
+
+    overflow-x:auto;
+
+    margin-bottom:25px;
+
+    scrollbar-width:none;
+
+}
+
+.categories::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.category{
+
+    border:none;
+
+    background:transparent;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#666666;
+
+    cursor:pointer;
+
+    padding-bottom:8px;
+
+    transition:.3s;
+
+}
+
+.category.active{
+
+    color:var(--primary-color);
+
+    border-bottom:3px solid var(--primary-color);
+
+}
+
+.category:hover{
+
+    color:var(--primary-color);
+
+}
+
+/*==================================================
+=            LISTA DE PLATOS
+==================================================*/
+
+.food-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    
+
+}
+
+/*==================================================
+=            TARJETA
+==================================================*/
+
+.food-card{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:#a03d3d;
+
+    border-radius:18px;
+
+    padding:12px;
+
+    box-sizing:border-box;
+
+
+}
+
+.food-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/*==================================================
+=            IMAGEN
+==================================================*/
+
+.food-image{
+
+      width:95px;
+
+    height:95px;
+
+    flex-shrink:0;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+
+}
+
+.food-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/*==================================================
+=            INFORMACIÓN
+==================================================*/
+
+.food-information{
+
+    flex:1;
+
+    margin-left:18px;
+
+}
+
+.food-information h3{
+
+    margin:0;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.food-information p{
+
+    margin:8px 0;
+
+    font-size:14px;
+
+    color:var(--text-light);
+
+    line-height:1.5;
+
+}
+
+.food-price{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:var(--primary-color);
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+/*==================================================
+=            BOTÓN +
+==================================================*/
+
+.food-action{
+
+    margin-left:15px;
+
+}
+
+.add-button{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#FF6B00;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.add-button ion-icon{
+
+    color:white;
+
+    font-size:24px;
+
+}
+
+.add-button:hover{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+=            RESPONSIVE
+==================================================*/
+
+@media(max-width:576px){
+
+    .plato-container{
+
+        padding:15px;
+
+    }
+
+    .food-card{
+
+        padding:12px;
+
+    }
+
+    .food-image{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+    .food-information h3{
+
+        font-size:17px;
+
+    }
+
+    .food-price{
+
+        font-size:18px;
+
+    }
+
+}
+/*==================================================
+=            FOOTER
+==================================================*/
+
+ion-footer{
+
+    background:transparent;
+
+    box-shadow:none;
+
+}
+
+ion-toolbar{
+
+    --background:#FFFFFF;
+
+    --border-width:0;
+
+    border-radius:25px 25px 0 0;
+
+    padding:10px 0;
+
+    box-shadow:0 -6px 20px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+=            BOTTOM NAVIGATION
+==================================================*/
+
+.bottom-navigation{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    width:100%;
+
+}
+
+.nav-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:5px;
+
+    border:none;
+
+    background:transparent;
+
+    color:#808080;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.nav-item ion-icon{
+
+    font-size:24px;
+
+}
+
+.nav-item span{
+
+    font-size:12px;
+
+    font-weight:500;
+
+}
+
+.nav-item.active{
+
+    color:var(--primary-color);
+
+}
+
+.nav-item:hover{
+
+    color:var(--primary-color);
+
+    transform:translateY(-3px);
+
+}
+
+/*==================================================
+=            EFECTOS
+==================================================*/
+
+.back-button,
+.category,
+.food-card,
+.add-button,
+.nav-item{
+
+    transition:.3s ease;
+
+}
+
+.food-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.back-button:hover{
+
+    transform:scale(1.05);
+
+}
+
+.category:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.add-button:hover{
+
+    transform:scale(1.10);
+
+}
+
+/*==================================================
+=            SCROLL
+==================================================*/
+
+ion-content::part(scroll){
+
+    padding-bottom:20px;
+
+}
+
+/*==================================================
+=            TABLET
+==================================================*/
+
+@media(min-width:768px){
+
+    .plato-container{
+
+        max-width:750px;
+
+        margin:auto;
+
+    }
+
+    .food-card{
+
+        padding:18px;
+
+    }
+
+    .food-image{
+
+        width:130px;
+
+        height:130px;
+
+    }
+
+    .food-information h3{
+
+        font-size:22px;
+
+    }
+
+    .food-information p{
+
+        font-size:15px;
+
+    }
+
+    ion-toolbar{
+
+        max-width:750px;
+
+        margin:auto;
+
+        border-radius:25px;
+
+    }
+
+}
+
+/*==================================================
+=            DESKTOP
+==================================================*/
+
+@media(min-width:1200px){
+
+    .plato-container{
+
+        max-width:1100px;
+
+        margin:auto;
+
+    }
+
+    .food-list{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:25px;
+
+    }
+
+    .food-card{
+
+        height:170px;
+
+    }
+
+    ion-toolbar{
+
+        max-width:1100px;
+
+        margin:auto;
+
+    }
+
+}

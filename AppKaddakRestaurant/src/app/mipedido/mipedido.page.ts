@@ -11,7 +11,16 @@ import { ApiService } from '../services/api.service';
   templateUrl: './mipedido.page.html',
   styleUrls: ['./mipedido.page.scss'],
   standalone: true,
-  imports: [IonContent, IonCard, IonCardContent, IonCardSubtitle, IonCardTitle, IonItem, IonCardHeader, IonList, IonLabel, IonButton, IonIcon, IonTabBar, IonTabButton, IonSegment, IonSegmentButton, IonInput, CommonModule, FormsModule, RouterModule]
+  imports: [IonContent, 
+    IonItem, 
+    IonLabel, 
+    IonButton, 
+    IonIcon, 
+    IonTabBar, 
+    IonTabButton, 
+    IonSegment, 
+    IonSegmentButton, 
+    IonInput, CommonModule, FormsModule, RouterModule]
 })
 export class MipedidoPage implements OnInit {
   cartItems: any[] = [];
