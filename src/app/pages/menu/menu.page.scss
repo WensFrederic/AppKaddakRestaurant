@@ -1,0 +1,137 @@
+// Fondo principal de la vista del menú (tono crema muy sutil)
+.menu-content {
+  --background: #fdfbf9;
+}
+
+// Estilo personalizado para la barra de navegación superior
+.custom-toolbar {
+  --background: #fdfbf9;
+  --border-style: none;
+  padding-top: 10px;
+  
+  .menu-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1e1e1e;
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+
+// Barra deslizable horizontal para las categorías de comida
+.categories-scroll {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 20px 20px 20px;
+  scrollbar-width: none; // Oculta la barra de desplazamiento en Firefox
+  
+  &::-webkit-scrollbar {
+    display: none; // Oculta la barra de desplazamiento en Chrome y Safari
+  }
+
+  .category-item {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #8c8c8c;
+    margin-right: 25px;
+    padding-bottom: 5px;
+    cursor: pointer;
+
+    &.active {
+      color: #f25e1d; // Color naranja activo
+      border-bottom: 3px solid #f25e1d; // Línea indicadora inferior
+      font-weight: 800;
+    }
+  }
+}
+
+// Contenedor general que agrupa las tarjetas de comida
+.food-list {
+  padding: 0 16px;
+}
+
+// Diseño individual de cada tarjeta de plato
+.food-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 24px; // Bordes muy redondeados según la imagen de referencia
+  padding: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); // Sombra suave para dar profundidad
+
+  // Recuadro y ajuste de la imagen del plato
+  .food-image-box {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 14px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Evita que la imagen se deforme al escalar
+    }
+  }
+
+  // Estilos para el texto de información (Nombre, descripción y precio)
+  .food-details {
+    flex: 1;
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0 0 4px 0;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: #8a8a8a;
+      line-height: 1.2;
+      margin: 0 0 8px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; // Limita la descripción a un máximo de 2 líneas
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .food-price {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #f25e1d; // Color naranja corporativo para el precio
+    }
+  }
+
+  // Botón circular naranja de acción rápida (Agregar)
+  .add-button-container {
+    padding-left: 10px;
+
+    .add-btn {
+      background: #f25e1d;
+      color: white;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%; // Hace que el botón sea perfectamente circular
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(242, 94, 29, 0.3);
+      cursor: pointer;
+      transition: transform 0.2s;
+
+      ion-icon {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      &:active {
+        transform: scale(0.9); // Efecto visual de rebote al pulsar el botón
+      }
+    }
+  }
+}

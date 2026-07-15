@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-button color="dark" (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="menu-title">Menú</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="menu-content">
+  <div class="categories-scroll">
+    <span 
+      *ngFor="let cat of categories" 
+      class="category-item" 
+      [class.active]="selectedCategory === cat"
+      (click)="selectCategory(cat)">
+      {{ cat }}
+    </span>
+  </div>
+
+  <div class="food-list">
+    <div class="food-card" *ngFor="let item of getFilteredFoodList()">
+      
+      <div class="food-image-box">
+        <img [src]="item.image" [alt]="item.name" onerror="this.src='https://placehold.co/120x120?text=Comida'">
+      </div>
+      
+      <div class="food-details">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        <span class="food-price">${{ item.price.toFixed(2) }}</span>
+      </div>
+      
+      <div class="add-button-container">
+        <button class="add-btn" (click)="addToCart(item)">
+          <ion-icon name="add-outline"></ion-icon>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</ion-content>

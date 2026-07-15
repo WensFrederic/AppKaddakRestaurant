@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // <-- Importado para hacer funcionar la navegación al menú
 import { NetworkService } from '../services/network';
 
 @Component({
@@ -8,7 +9,11 @@ import { NetworkService } from '../services/network';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule]
+  imports: [
+    IonicModule, 
+    CommonModule,
+    RouterModule // <-- Agregado a los imports necesarios del componente
+  ]
 })
 export class HomePage implements OnInit {
   // Variable pública para almacenar el estado actual de la conexión a internet
