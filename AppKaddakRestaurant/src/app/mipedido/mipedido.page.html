@@ -1,96 +1,411 @@
-<ion-content>
-  <div class="header">
-    <h2>Tu Pedido 🛒</h2>
-    <p>Revisa tus platos antes de pagar</p>
+<ion-content fullscreen>
+
+  <!--=========================================
+      CONTENEDOR PRINCIPAL
+  ==========================================-->
+
+  <div class="pedido-container">
+
+    <!--=========================================
+        HEADER
+    ==========================================-->
+
+    <header class="header">
+
+      <!-- Botón regresar -->
+
+      <button
+        class="back-button"
+        routerLink="/plato">
+
+        <ion-icon
+          name="arrow-back-outline">
+        </ion-icon>
+
+      </button>
+
+      <!-- Título -->
+
+      <h2 class="page-title">
+
+        Mi pedido
+
+      </h2>
+
+      <!-- Vacío para centrar el título -->
+
+      <div class="header-space"></div>
+
+      <!-- Eliminar carrito -->
+
+      <button
+        class="delete-item-button"
+        *ngFor="let item of carrito"
+        (click)="eliminarProducto(item.producto.id)">
+
+        <ion-icon
+          name="trash-outline">
+        </ion-icon>
+
+      </button>
+
+    </header>
+
+    <!--=========================================
+        TIPO DE PEDIDO
+    ==========================================-->
+
+    <section class="order-type">
+
+      <button
+        class="type-button"
+        [class.active] = "tipoPedido === 'delivery'"
+        (click)="seleccionarTipo('delivery')">
+
+        Delivery
+
+      </button>
+
+      <button
+        class="type-button"
+        [class.active]="tipoPedido === 'pickup'"
+        (click)="seleccionarTipo('pickup')">
+
+        Pick Up
+
+      </button>
+
+      <button
+        class="type-button active"
+        class="tipoPedido === 'mesa'" 
+        (click)="seleccionarTipo('mesa')">
+
+        <span class="type-title">
+
+          Comer aquí
+
+        </span>
+
+        <small>
+
+          Ordena sin hacer la fila
+
+        </small>
+
+      </button>
+
+    </section>
+
+    <!--=========================================
+        INFORMACIÓN DE LA MESA
+        (Se desarrollará en la Parte 2)
+    ==========================================-->
+     <!--=========================================
+        INFORMACIÓN DE LA MESA
+    ==========================================-->
+
+    <section class="table-section">
+
+      <div class="table-information">
+
+        <span class="table-title">
+
+          Mesa
+
+        </span>
+
+        <h3>
+
+          Mesa 07
+
+        </h3>
+
+      </div>
+
+      <button
+        class="change-table-button"
+        (click)="cambiarMesa()">
+
+        Cambiar mesa
+
+      </button>
+
+    </section>
+
+    <!--=========================================
+        LISTA DE PRODUCTOS
+    ==========================================-->
+
+    <section class="cart-products">
+
+      <!--=========================================
+          PRODUCTO
+      ==========================================-->
+
+      <div class="cart-item">
+
+        <div class="item-image">
+
+          <img
+            src="assets/comida.jpg"
+            alt="Hamburguesa Kaddak">
+
+        </div>
+
+        <div class="item-information">
+
+          <h3>
+
+            Hamburguesa Kaddak
+
+          </h3>
+
+          <span class="item-price">
+
+            $12.50
+
+          </span>
+
+        </div>
+
+        <div class="item-quantity">
+
+          <button class="quantity-button">
+
+            <ion-icon
+              name="remove">
+            </ion-icon>
+
+          </button>
+
+          <span class="quantity">
+
+            1
+
+          </span>
+
+          <button class="quantity-button">
+
+            <ion-icon
+              name="add">
+            </ion-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!--=========================================
+          PRODUCTO
+      ==========================================-->
+
+      <div class="cart-item">
+
+        <div class="item-image">
+
+          <img
+            src="assets/comida.jpg"
+            alt="Papas Crisccut">
+
+        </div>
+
+        <div class="item-information">
+
+          <h3>
+
+            Papas Crisccut
+
+          </h3>
+
+          <span class="item-price">
+
+            $3.50
+
+          </span>
+
+        </div>
+
+        <div class="item-quantity">
+
+          <button class="quantity-button">
+
+            <ion-icon
+              name="remove">
+            </ion-icon>
+
+          </button>
+
+          <span class="quantity">
+
+            1
+
+          </span>
+
+          <button class="quantity-button">
+
+            <ion-icon
+              name="add">
+            </ion-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!--=========================================
+          PRODUCTO
+      ==========================================-->
+
+      <div class="cart-item">
+
+        <div class="item-image">
+
+          <img
+            src="assets/jugo1.jpeg"
+            alt="Limonada Natural">
+
+        </div>
+
+        <div class="item-information">
+
+          <h3>
+
+            Limonada Natural
+
+          </h3>
+
+          <span class="item-price">
+
+            $2.50
+
+          </span>
+
+        </div>
+
+        <div class="item-quantity">
+
+          <button class="quantity-button">
+
+            <ion-icon
+              name="remove">
+            </ion-icon>
+
+          </button>
+
+          <span class="quantity">
+
+            1
+
+          </span>
+
+          <button class="quantity-button">
+
+            <ion-icon
+              name="add">
+            </ion-icon>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!--=========================================
+        RESUMEN DEL PEDIDO
+        (Se desarrollará en la Parte 3)
+    ==========================================-->
+    <!--=========================================
+        RESUMEN DEL PEDIDO
+    ==========================================-->
+
+    <section class="order-summary">
+
+      <!-- Subtotal -->
+
+      <div class="summary-row">
+
+        <span>
+
+          Subtotal
+
+        </span>
+
+        <span>
+
+          $18.50
+
+        </span>
+
+      </div>
+
+      <!-- Impuestos -->
+
+      <div class="summary-row">
+
+        <span>
+
+          Impuestos
+
+        </span>
+
+        <span>
+
+          $1.85
+
+        </span>
+
+      </div>
+
+      <!-- Línea divisoria -->
+
+      <div class="divider"></div>
+
+      <!-- Total -->
+
+      <div class="total-row">
+
+        <h3>
+
+          Total
+
+        </h3>
+
+        <h2>
+
+          $20.35
+
+        </h2>
+
+      </div>
+
+    </section>
+
+    <!--=========================================
+        BOTÓN CONFIRMAR PEDIDO
+    ==========================================-->
+
+    <section class="confirm-section">
+
+      <ion-button
+
+        expand="block"
+
+        class="confirm-button"
+
+        (click)="confirmarPedido()">
+
+        Confirmar pedido
+
+      </ion-button>
+
+    </section>
+
   </div>
 
-  <div class="empty-state" *ngIf="cartItems.length === 0">
-    <h2>🍽️</h2>
-    <p>Tu carrito está vacío.<br>Agrega platos desde el Menú.</p>
-  </div>
-
-  <div class="cart-items" *ngIf="cartItems.length > 0">
-    <div class="cart-item" *ngFor="let item of cartItems">
-      <div class="item-info">
-        <h3>{{ item.nombre_comida }}</h3>
-        <p>${{ item.precio }}</p>
-      </div>
-      <div class="quantity-badge">
-        x{{ item.cantidad }}
-      </div>
-    </div>
-  </div>
-
-  <div class="delivery-options" *ngIf="cartItems.length > 0" style="padding: 10px;">
-    <h3 style="font-weight: 700; color: #333; margin-bottom: 10px;">Opciones de Entrega</h3>
-    <ion-segment [(ngModel)]="tipoEntrega" color="primary">
-      <ion-segment-button value="pickup">
-        <ion-label>Pick Up</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="delivery">
-        <ion-label>Delivery</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-
-    <div *ngIf="tipoEntrega === 'delivery'" style="margin-top: 15px;">
-      <ion-item lines="full" style="--background: transparent;">
-        <ion-label position="floating" style="color: #666;">Dirección de entrega</ion-label>
-        <ion-input type="text" [(ngModel)]="direccionEntrega"></ion-input>
-      </ion-item>
-    </div>
-  </div>
-
-  <div class="payment-section" *ngIf="cartItems.length > 0" style="padding: 10px;">
-    <h3 style="font-weight: 700; color: #333; margin-bottom: 10px;">Método de Pago</h3>
-    <ion-segment [(ngModel)]="metodoPago" color="secondary">
-      <ion-segment-button value="tarjeta">
-        <ion-label>Tarjeta</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="paypal">
-        <ion-label>PayPal</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="efectivo">
-        <ion-label>Efectivo</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-
-    <div class="totals">
-      <div class="row">
-        <span>Subtotal</span>
-        <span>${{ total }}</span>
-      </div>
-      <div class="row">
-        <span>Impuestos / Envío</span>
-        <span>$0.00</span>
-      </div>
-      <div class="row grand-total">
-        <span>Total a Pagar</span>
-        <span>${{ total }}</span>
-      </div>
-    </div>
-
-    <ion-button expand="block" class="pay-btn" (click)="confirmarPedido()">
-      Pagar y Ordenar
-    </ion-button>
-
-    <ion-button expand="block" fill="clear" color="medium" (click)="vaciarCarrito()" style="margin-top: 10px;">
-      Vaciar Carrito
-    </ion-button>
-  </div>
 </ion-content>
 
-<!-- Bottom Menu -->
-<ion-tab-bar slot="bottom">
-  <ion-tab-button routerLink="/menu">
-    <ion-icon name="restaurant"></ion-icon>
-    <ion-label>Menú</ion-label>
-  </ion-tab-button>
-  <ion-tab-button routerLink="/mipedido">
-    <ion-icon name="receipt"></ion-icon>
-    <ion-label>Pedidos</ion-label>
-  </ion-tab-button>
-  <ion-tab-button routerLink="/perfil">
-    <ion-icon name="person"></ion-icon>
-    <ion-label>Perfil</ion-label>
-  </ion-tab-button>
-</ion-tab-bar>
+

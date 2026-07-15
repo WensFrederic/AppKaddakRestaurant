@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { IonContent, IonTabButton, IonLabel, IonIcon, IonSearchbar, IonTabBar, IonButton, IonBadge, ToastController, IonToolbar, IonFooter } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { cartOutline, cart, restaurant, receipt, person, notificationsOutline, flame, add, home, clipboard, restaurantOutline, receiptOutline, personOutline, homeOutline } from 'ionicons/icons';
@@ -30,9 +30,17 @@ export class MenuPage implements OnInit {
   constructor(
     private apiService: ApiService,
     private cartService: CartService,
-    private toastController: ToastController
+    private toastController: ToastController, 
+    private router:Router 
   ) {
-      addIcons({notificationsOutline,cartOutline,add,homeOutline,restaurantOutline,receiptOutline,personOutline,home,flame,restaurant,clipboard,person,receipt}); }
+      addIcons({notificationsOutline,cartOutline,add,homeOutline,restaurantOutline,receiptOutline,personOutline,flame,restaurant,clipboard,person,receipt}); 
+    }
+
+   plato(){
+    this.router.navigate(['/plato'])
+   }
+
+
 
   ngOnInit() {
     this.apiService.getCategorias().subscribe({

@@ -1,151 +1,762 @@
-/* Fondo de la página */
-ion-content {
-  --background: linear-gradient(135deg, #4a90e2, #6a11cb);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/*==================================================
+=            VARIABLES
+==================================================*/
+
+:root{
+
+    --primary-color:#FF6B00;
+
+    --background-color:#FFF8F2;
+
+    --white:#FFFFFF;
+
+    --text-color:#222222;
+
+    --text-light:#6F6F6F;
+
+    --border-color:#ECECEC;
+
+    --shadow:0 5px 18px rgba(0,0,0,.08);
+
 }
 
-/* Tarjeta principal */
-ion-card {
-  width: 90%;
-  max-width: 400px;
-  margin: 80px auto;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  background: #ffffff;
+/*==================================================
+=            GENERAL
+==================================================*/
+
+ion-content{
+
+    --background:red ;
+
 }
 
-/* Encabezado */
-ion-content {
-  --background: #f8f9fa;
+.pedido-container{
+
+    width:100%;
+
+    max-width:450px;
+
+    margin:0 auto;
+
+    padding:20px;
+
+    min-height:100vh;
+
+    box-sizing:border-box;
+
 }
 
-.header {
-  padding: 24px 20px 10px;
-  h2 {
-    font-size: 28px;
-    font-weight: 800;
-    color: #1c1c1c;
-    margin: 0;
-  }
-  p {
-    color: #8c8c8c;
-    margin-top: 5px;
-  }
+/*==================================================
+=            HEADER
+==================================================*/
+
+.header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:25px;
+
 }
 
-.cart-items {
-  padding: 10px 20px;
+.page-title{
+
+    flex:1;
+
+    text-align:center;
+
+    margin:0;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:var(--text-color);
+
 }
 
-.cart-item {
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 15px;
-  border-radius: 16px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+.header-space{
 
-  .item-info {
-    flex: 1;
+    width:45px;
 
-    h3 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #333;
-      margin: 0 0 5px 0;
+}
+
+.back-button,
+.delete-button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    background:transparent;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.back-button ion-icon,
+.delete-button ion-icon{
+
+    font-size:24px;
+
+    color:#444;
+
+}
+
+.back-button:hover,
+.delete-button:hover{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+=            TIPO DE PEDIDO
+==================================================*/
+
+.order-type{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+.type-button{
+
+    flex:1;
+
+    border:none;
+
+    background:#F2F2F2;
+
+    border-radius:15px;
+
+    padding:12px 10px;
+
+    color:#555;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.type-button.active{
+
+    background:var(--primary-color);
+
+    color:white;
+
+}
+
+.type-title{
+
+    display:block;
+
+    font-weight:700;
+
+    font-size:15px;
+
+}
+
+.type-button small{
+
+    display:block;
+
+    margin-top:4px;
+
+    font-size:11px;
+
+    opacity:.9;
+
+}
+
+.type-button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/*==================================================
+=            RESPONSIVE
+==================================================*/
+
+@media(max-width:576px){
+
+    .pedido-container{
+
+        padding:15px;
+
     }
-    p {
-      color: #ff4757;
-      font-weight: 700;
-      margin: 0;
-    }
-  }
 
-  .quantity-badge {
-    background: #f4f4f4;
-    color: #1c1c1c;
-    font-weight: 700;
-    padding: 8px 14px;
-    border-radius: 10px;
-    font-size: 15px;
-  }
+    .page-title{
+
+        font-size:24px;
+
+    }
+
+    .type-button{
+
+        font-size:13px;
+
+        padding:10px;
+
+    }
+
 }
 
-.payment-section {
-  padding: 25px 20px;
-  margin-top: 15px;
-  background: white;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+@media(min-width:768px){
 
-  h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
+    .pedido-container{
 
-  .payment-methods {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 25px;
+        max-width:500px;
 
-    .method {
-      flex: 1;
-      text-align: center;
-      padding: 15px 5px;
-      border: 1.5px solid #eaeaea;
-      border-radius: 14px;
-      color: #666;
-      font-weight: 600;
-      font-size: 14px;
-      transition: all 0.2s ease;
-      
-      &.active {
-        border-color: #ff4757;
-        background: #fff0f1;
-        color: #ff4757;
-      }
     }
-  }
 
-  .totals {
-    .row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 12px;
-      color: #666;
-      font-size: 15px;
-
-      &.grand-total {
-        font-size: 22px;
-        font-weight: 800;
-        color: #1c1c1c;
-        margin-top: 18px;
-        padding-top: 18px;
-        border-top: 2px dashed #eaeaea;
-      }
-    }
-  }
-
-  .pay-btn {
-    --background: linear-gradient(135deg, #ff6b6b, #ff4757);
-    --border-radius: 16px;
-    margin-top: 25px;
-    height: 56px;
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: none;
-    --box-shadow: 0 8px 16px rgba(255, 71, 87, 0.25);
-  }
 }
 
-.empty-state {
-  text-align: center;
-  padding: 80px 20px;
-  h2 { font-size: 50px; margin-bottom: 15px; }
-  p { color: #888; font-size: 16px; line-height: 1.5; }
+@media(min-width:1200px){
+
+    .pedido-container{
+
+        max-width:550px;
+
+    }
+
 }
+
+/*==================================================
+=            INFORMACIÓN DE LA MESA
+==================================================*/
+
+.table-section{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:var(--white);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.table-information{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.table-title{
+
+    font-size:13px;
+
+    color:var(--text-light);
+
+    margin-bottom:5px;
+
+}
+
+.table-information h3{
+
+    margin:0;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--text-color);
+
+}
+
+.change-table-button{
+
+    border:none;
+
+    background:var(--primary-color);
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.change-table-button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/*==================================================
+=            PRODUCTOS
+==================================================*/
+
+.cart-products{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/*==================================================
+=            TARJETA
+==================================================*/
+
+.cart-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:var(--white);
+
+    border-radius:18px;
+
+    padding:15px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.cart-item:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/*==================================================
+=            IMAGEN
+==================================================*/
+
+.item-image{
+
+    width:85px;
+
+    height:85px;
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    flex-shrink:0;
+
+}
+
+.item-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/*==================================================
+=            INFORMACIÓN
+==================================================*/
+
+.item-information{
+
+    flex:1;
+
+    margin-left:18px;
+
+}
+
+.item-information h3{
+
+    margin:0;
+
+    font-size:18px;
+
+    color:var(--text-color);
+
+}
+
+.item-price{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:var(--primary-color);
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+/*==================================================
+=            CANTIDAD
+==================================================*/
+
+.item-quantity{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.quantity{
+
+    width:28px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--text-color);
+
+}
+
+.quantity-button{
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#555555;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.quantity-button ion-icon{
+
+    font-size:20px;
+
+    color:var(--text-color);
+
+}
+
+.quantity-button:hover{
+
+    background:var(--primary-color);
+
+}
+
+.quantity-button:hover ion-icon{
+
+    color:white;
+
+}
+
+/*==================================================
+=            RESPONSIVE
+==================================================*/
+
+@media(max-width:576px){
+
+    .table-section{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .change-table-button{
+
+        width:100%;
+
+    }
+
+    .cart-item{
+
+        padding:12px;
+
+    }
+
+    .item-image{
+
+        width:70px;
+
+        height:70px;
+
+    }
+
+    .item-information h3{
+
+        font-size:16px;
+
+    }
+
+    .item-price{
+
+        font-size:18px;
+
+    }
+
+}
+
+/*==================================================
+=            RESUMEN DEL PEDIDO
+==================================================*/
+
+.order-summary{
+
+    margin-top:30px;
+
+    background:var(--white);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+    font-size:16px;
+
+    color:var(--text-light);
+
+}
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:#EAEAEA;
+
+    margin:18px 0;
+
+}
+
+.total-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.total-row h3{
+
+    margin:0;
+
+    font-size:20px;
+
+    color:var(--text-color);
+
+}
+
+.total-row h2{
+
+    margin:0;
+
+    font-size:28px;
+
+    color:var(--primary-color);
+
+    font-weight:700;
+
+}
+
+/*==================================================
+=            BOTÓN CONFIRMAR
+==================================================*/
+
+.confirm-section{
+
+    margin-top:30px;
+
+    margin-bottom:25px;
+
+}
+
+.confirm-button{
+
+    --background:var(--primary-color);
+
+    --border-radius:18px;
+
+    height:55px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    text-transform:none;
+
+    box-shadow:0 8px 18px rgba(255,107,0,.35);
+
+}
+
+.confirm-button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/*==================================================
+=            FOOTER
+==================================================*/
+
+ion-footer{
+
+    background:transparent;
+
+    box-shadow:none;
+
+}
+
+ion-toolbar{
+
+    --background:#FFFFFF;
+
+    --border-width:0;
+
+    border-radius:25px 25px 0 0;
+
+    box-shadow:0 -8px 25px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+=            ANIMACIONES
+==================================================*/
+
+.cart-item,
+.change-table-button,
+.quantity-button,
+.confirm-button{
+
+    transition:all .3s ease;
+
+}
+
+.cart-item:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.change-table-button:hover{
+
+    transform:scale(1.03);
+
+}
+
+.confirm-button:hover{
+
+    filter:brightness(1.05);
+
+}
+
+.quantity-button:hover{
+
+    transform:scale(1.10);
+
+}
+
+/*==================================================
+=            RESPONSIVE TABLET
+==================================================*/
+
+@media(min-width:768px){
+
+    .pedido-container{
+
+        max-width:600px;
+
+        margin:auto;
+
+    }
+
+    .confirm-button{
+
+        max-width:350px;
+
+        margin:auto;
+
+    }
+
+}
+

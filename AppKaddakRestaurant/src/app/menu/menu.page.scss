@@ -691,7 +691,7 @@ ion-content{
 
     font-size:18px;
 
-    color:var(--text-color);
+    color:black;
 
 }
 
@@ -701,7 +701,7 @@ ion-content{
 
     margin-top:10px;
 
-    color:var(--primary-color);
+    color:gray;
 
     font-size:18px;
 
@@ -860,13 +860,13 @@ ion-toolbar{
 
 .nav-item.active{
 
-    color:var(--primary-color);
+    color:black;
 
 }
 
 .nav-item:hover{
 
-    color:var(--primary-color);
+    color:orangered;
 
     transform:translateY(-3px);
 
@@ -975,18 +975,3 @@ ion-content::part(scroll){
 
 }
 
-/*------------------*/
-/* Desktop          */
-/*------------------*/
-
-@media(min-width:1200px){
-
-    ion-toolbar{
-
-        max-width:1100px;
-
-        margin:auto;
-
-    }
-
-}

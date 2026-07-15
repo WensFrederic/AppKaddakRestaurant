@@ -1,53 +1,27 @@
 /*==================================================
-=            VARIABLES
+=            CONTENEDOR PRINCIPAL
 ==================================================*/
 
-:root{
+ion-content {
 
-    --primary-color:#FF6B00;
-
-    --secondary-color:#FFF7F1;
-
-    --background-color:#FFF8F2;
-
-    --text-color:#222222;
-
-    --text-light:#6F6F6F;
-
-    --white:#FFFFFF;
-
-    --shadow:0 6px 20px rgba(0,0,0,.08);
-
-}
-
-/*==================================================
-=            GENERAL
-==================================================*/
-
-ion-content{
-
-    --background:rgb(182, 202, 65);
+  --background: #f8f8f8;
 
 }
 
 .plato-container{
-   
-    width:100%;
 
-    max-width:500px;
+  width:100%;
 
-    margin:0 auto;
+  max-width:500px;
 
-    padding:20px;
+  margin:0 auto;
 
-    display:flex;
+  padding:25px 18px 90px;
 
-    flex-direction:column;
-
-    align-items:center;
-   
+  box-sizing:border-box;
 
 }
+
 
 /*==================================================
 =            HEADER
@@ -55,133 +29,134 @@ ion-content{
 
 .header{
 
-    display:flex;
+  display:flex;
 
-    align-items:center;
+  align-items:center;
 
-    margin-bottom:25px;
+  gap:15px;
+
+  margin-bottom:25px;
 
 }
 
 .back-button{
 
-    width:45px;
+  width:42px;
 
-    height:45px;
+  height:42px;
 
-    border:none;
+  border:none;
 
-    background:var(--white);
+  border-radius:50%;
 
-    border-radius:50%;
+  background:#ffffff;
 
-    display:flex;
+  display:flex;
 
-    justify-content:center;
+  align-items:center;
 
-    align-items:center;
+  justify-content:center;
 
-    box-shadow:var(--shadow);
+  cursor:pointer;
 
-    margin-right:15px;
-
-    cursor:pointer;
+  box-shadow:0 3px 10px rgba(0,0,0,.08);
 
 }
 
 .back-button ion-icon{
 
-    font-size:24px;
+  font-size:22px;
 
-    color:#333333;
+  color:#333;
 
 }
 
 .page-title{
 
-    margin:0;
+  font-size:25px;
 
-    font-size:28px;
+  font-weight:700;
 
-    font-weight:700;
+  color:#222;
 
-    color:var(--text-color);
+  margin:0;
 
 }
 
+
 /*==================================================
-=            CATEGORÍAS
+=            CATEGORIAS
 ==================================================*/
 
 .categories{
 
-    display:flex;
+  display:flex;
 
-    gap:20px;
+  gap:12px;
 
-    overflow-x:auto;
+  overflow-x:auto;
 
-    margin-bottom:25px;
+  padding-bottom:15px;
 
-    scrollbar-width:none;
+  margin-bottom:25px;
+
+  scrollbar-width:none;
 
 }
 
 .categories::-webkit-scrollbar{
 
-    display:none;
+  display:none;
 
 }
 
 .category{
 
-    border:none;
+  border:none;
 
-    background:transparent;
+  background:#ececec;
 
-    font-size:16px;
+  color:#555;
 
-    font-weight:600;
+  padding:10px 18px;
 
-    color:#666666;
+  border-radius:25px;
 
-    cursor:pointer;
+  font-size:14px;
 
-    padding-bottom:8px;
+  font-weight:600;
 
-    transition:.3s;
+  white-space:nowrap;
+
+  cursor:pointer;
+
+  transition:.3s;
 
 }
 
 .category.active{
 
-    color:var(--primary-color);
+  background:#ff6b00;
 
-    border-bottom:3px solid var(--primary-color);
-
-}
-
-.category:hover{
-
-    color:var(--primary-color);
+  color:#fff;
 
 }
+
 
 /*==================================================
-=            LISTA DE PLATOS
+=            LISTA DE PRODUCTOS
 ==================================================*/
 
 .food-list{
 
-    display:flex;
+  display:flex;
 
-    flex-direction:column;
+  flex-direction:column;
 
-    align-items:center;
-
-    
+  gap:18px;
 
 }
+
 
 /*==================================================
 =            TARJETA
@@ -189,30 +164,30 @@ ion-content{
 
 .food-card{
 
-    width:100%;
+  display:flex;
 
-    display:flex;
+  align-items:center;
 
-    align-items:center;
+  gap:15px;
 
-    justify-content:space-between;
+  background:#fff;
 
-    background:#a03d3d;
+  border-radius:18px;
 
-    border-radius:18px;
+  padding:12px;
 
-    padding:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
 
-    box-sizing:border-box;
-
+  transition:.3s;
 
 }
 
 .food-card:hover{
 
-    transform:translateY(-4px);
+  transform:translateY(-2px);
 
 }
+
 
 /*==================================================
 =            IMAGEN
@@ -220,390 +195,249 @@ ion-content{
 
 .food-image{
 
-      width:95px;
+  width:95px;
 
-    height:95px;
+  height:95px;
 
-    flex-shrink:0;
-
-    overflow:hidden;
-
-    border-radius:18px;
-
+  flex-shrink:0;
 
 }
 
 .food-image img{
 
-    width:100%;
+  width:100%;
 
-    height:100%;
+  height:100%;
 
-    object-fit:cover;
+  border-radius:15px;
+
+  object-fit:cover;
 
 }
 
+
 /*==================================================
-=            INFORMACIÓN
+=            INFORMACION
 ==================================================*/
 
 .food-information{
 
-    flex:1;
-
-    margin-left:18px;
+  flex:1;
 
 }
 
 .food-information h3{
 
-    margin:0;
+  margin:0 0 6px;
 
-    font-size:18px;
+  font-size:18px;
 
-    font-weight:700;
+  color:#222;
+
+  font-weight:700;
 
 }
 
 .food-information p{
 
-    margin:8px 0;
+  margin:0;
 
-    font-size:14px;
+  color:#666;
 
-    color:var(--text-light);
+  font-size:14px;
 
-    line-height:1.5;
+  line-height:1.5;
 
 }
 
 .food-price{
 
-    display:block;
+  display:block;
 
-    margin-top:8px;
+  margin-top:10px;
 
-    color:var(--primary-color);
+  color:#ff6b00;
 
-    font-size:22px;
+  font-size:22px;
 
-    font-weight:bold;
+  font-weight:700;
 
 }
 
+
 /*==================================================
-=            BOTÓN +
+=            BOTON AGREGAR
 ==================================================*/
 
 .food-action{
 
-    margin-left:15px;
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
 
 }
 
 .add-button{
 
-    width:38px;
+  width:42px;
 
-    height:38px;
+  height:42px;
 
-    border-radius:50%;
+  border:none;
 
-    border:none;
+  border-radius:50%;
 
-    background:#FF6B00;
+  background:#ff6b00;
 
-    display:flex;
+  display:flex;
 
-    justify-content:center;
+  align-items:center;
 
-    align-items:center;
+  justify-content:center;
 
-}
+  cursor:pointer;
 
-.add-button ion-icon{
-
-    color:white;
-
-    font-size:24px;
+  transition:.3s;
 
 }
 
 .add-button:hover{
 
-    transform:scale(1.08);
+  transform:scale(1.08);
 
 }
 
-/*==================================================
-=            RESPONSIVE
-==================================================*/
+.add-button ion-icon{
 
-@media(max-width:576px){
+  color:#fff;
 
-    .plato-container{
-
-        padding:15px;
-
-    }
-
-    .food-card{
-
-        padding:12px;
-
-    }
-
-    .food-image{
-
-        width:90px;
-
-        height:90px;
-
-    }
-
-    .food-information h3{
-
-        font-size:17px;
-
-    }
-
-    .food-price{
-
-        font-size:18px;
-
-    }
+  font-size:22px;
 
 }
+
+
 /*==================================================
 =            FOOTER
 ==================================================*/
 
 ion-footer{
 
-    background:transparent;
-
-    box-shadow:none;
+  box-shadow:0 -3px 15px rgba(0,0,0,.08);
 
 }
 
 ion-toolbar{
 
-    --background:#FFFFFF;
-
-    --border-width:0;
-
-    border-radius:25px 25px 0 0;
-
-    padding:10px 0;
-
-    box-shadow:0 -6px 20px rgba(0,0,0,.08);
+  --background:#ffffff;
 
 }
 
-/*==================================================
-=            BOTTOM NAVIGATION
-==================================================*/
-
 .bottom-navigation{
 
-    display:flex;
+  display:flex;
 
-    justify-content:space-around;
+  justify-content:space-around;
 
-    align-items:center;
+  align-items:center;
 
-    width:100%;
+  padding:10px 0;
 
 }
 
 .nav-item{
 
-    display:flex;
+  background:none;
 
-    flex-direction:column;
+  border:none;
 
-    justify-content:center;
+  display:flex;
 
-    align-items:center;
+  flex-direction:column;
 
-    gap:5px;
+  align-items:center;
 
-    border:none;
+  color:#777;
 
-    background:transparent;
+  cursor:pointer;
 
-    color:#808080;
-
-    cursor:pointer;
-
-    transition:.3s;
+  transition:.3s;
 
 }
 
 .nav-item ion-icon{
 
-    font-size:24px;
+  font-size:24px;
 
 }
 
 .nav-item span{
 
-    font-size:12px;
+  font-size:12px;
 
-    font-weight:500;
+  margin-top:4px;
 
 }
 
 .nav-item.active{
 
-    color:var(--primary-color);
+  color:#ff6b00;
 
 }
 
-.nav-item:hover{
-
-    color:var(--primary-color);
-
-    transform:translateY(-3px);
-
-}
 
 /*==================================================
-=            EFECTOS
-==================================================*/
-
-.back-button,
-.category,
-.food-card,
-.add-button,
-.nav-item{
-
-    transition:.3s ease;
-
-}
-
-.food-card:hover{
-
-    transform:translateY(-5px);
-
-}
-
-.back-button:hover{
-
-    transform:scale(1.05);
-
-}
-
-.category:hover{
-
-    transform:translateY(-2px);
-
-}
-
-.add-button:hover{
-
-    transform:scale(1.10);
-
-}
-
-/*==================================================
-=            SCROLL
-==================================================*/
-
-ion-content::part(scroll){
-
-    padding-bottom:20px;
-
-}
-
-/*==================================================
-=            TABLET
+=            RESPONSIVE TABLET
 ==================================================*/
 
 @media(min-width:768px){
 
-    .plato-container{
+  .plato-container{
 
-        max-width:750px;
+      max-width:700px;
 
-        margin:auto;
+  }
 
-    }
+  .food-card{
 
-    .food-card{
+      padding:18px;
 
-        padding:18px;
+  }
 
-    }
+  .food-image{
 
-    .food-image{
+      width:120px;
 
-        width:130px;
+      height:120px;
 
-        height:130px;
+  }
 
-    }
+  .food-information h3{
 
-    .food-information h3{
+      font-size:22px;
 
-        font-size:22px;
+  }
 
-    }
+  .food-information p{
 
-    .food-information p{
+      font-size:16px;
 
-        font-size:15px;
-
-    }
-
-    ion-toolbar{
-
-        max-width:750px;
-
-        margin:auto;
-
-        border-radius:25px;
-
-    }
+  }
 
 }
 
+
 /*==================================================
-=            DESKTOP
+=            RESPONSIVE DESKTOP
 ==================================================*/
 
 @media(min-width:1200px){
 
-    .plato-container{
+  .plato-container{
 
-        max-width:1100px;
+      max-width:850px;
 
-        margin:auto;
-
-    }
-
-    .food-list{
-
-        display:grid;
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:25px;
-
-    }
-
-    .food-card{
-
-        height:170px;
-
-    }
-
-    ion-toolbar{
-
-        max-width:1100px;
-
-        margin:auto;
-
-    }
+  }
 
 }

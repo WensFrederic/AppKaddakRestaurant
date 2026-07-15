@@ -1,0 +1,19 @@
+export interface Producto  {
+
+  id: string;
+
+  nombre: string;
+
+  descripcion: string;
+
+  precio: number;
+
+  categoria: string;
+
+  imagen: string;
+
+  disponible: boolean;
+
+  tiempoPreparacion: number;
+
+}

@@ -82,7 +82,8 @@
 
       <!-- Plato -->
 
-      <div class="food-card">
+      <div class="food-card"
+      *ngFor="let producto of productos">
 
         <div class="food-image">
 
@@ -118,7 +119,8 @@
 
         <div class="food-action">
 
-          <button class="add-button">
+          <button class="add-button"
+          (click)="agregarAlCarrito(producto)">
 
             <ion-icon
               name="add">
@@ -301,7 +303,8 @@
 
       <button
         class="nav-item"
-        routerLink="/home">
+        routerLink="/home"
+        (click)="homes()">
 
         <ion-icon
           name="home-outline">
@@ -319,7 +322,8 @@
 
       <button
         class="nav-item active"
-        routerLink="/plato">
+        routerLink="/plato"
+        (click)="menus()">
 
         <ion-icon
           name="restaurant-outline">
@@ -355,7 +359,8 @@
 
       <button
         class="nav-item"
-        routerLink="/perfil">
+        routerLink="/perfil"
+        (click)="perfiles()">
 
         <ion-icon
           name="person-outline">
